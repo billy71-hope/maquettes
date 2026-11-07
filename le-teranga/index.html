@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Restaurant Le Teranga – Restaurant à Cotonou</title>
+<meta name="description" content="Le Teranga, une valeur sûre de Cotonou : terrasse ou salle, cuisine fraîche et service attentionné.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--r:18px;--btn-r:999px;--line:rgba(0,0,0,.09);--shadow:rgba(0,0,0,.35);--bg:#0f0d0b;--surface:#18150f;--surface-2:#14110d;--ink:#f3ece0;--muted:#b3a893;--accent:#d4a857;--on-accent:#0f0d0b;--line:rgba(212,168,87,.18);--shadow:rgba(0,0,0,.8);--head:'Playfair Display',serif;--head-w:500;--body:'Manrope',sans-serif;--nav-bg:rgba(15,13,11,.85);--nav-ink:#f3ece0;--hero-ink:#f3ece0;--btn-r:2px;--btn-ls:.12em;--btn-tt:uppercase;--r:4px;--shade:linear-gradient(90deg,rgba(15,13,11,.95) 0%,rgba(15,13,11,.7) 45%,rgba(15,13,11,.2) 100%);--hl-bg:#d4a857;--on-hl:#0f0d0b;--foot-bg:#0a0907;--foot-ink:#b3a893;--map-filter:grayscale(1) invert(.92) contrast(.9)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);font-weight:var(--head-w,700);line-height:1.05;letter-spacing:var(--head-ls,0);text-transform:var(--head-tt,none)}
+h2{font-size:clamp(2rem,4.4vw,3.3rem);margin-bottom:18px}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:14px}
+section{padding:110px 0;position:relative}
+.demo{background:#111;color:#ddd;text-align:center;font:500 .78rem/1.4 system-ui,sans-serif;padding:8px 16px;position:relative;z-index:60}
+/* nav */
+header{position:sticky;top:0;z-index:50;transition:background .3s,box-shadow .3s}
+header.solid{background:var(--nav-bg);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font-family:var(--head);font-size:1.5rem;font-weight:var(--head-w,700);letter-spacing:var(--head-ls,0);text-transform:var(--head-tt,none);color:var(--nav-ink)}
+.brand i{color:var(--accent);font-style:normal}
+.links{display:flex;gap:30px;font-size:.92rem;font-weight:500;color:var(--nav-ink)}
+.links a{opacity:.8;transition:opacity .2s}
+.links a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:var(--btn-r);font-weight:700;font-size:.95rem;background:var(--accent);color:var(--on-accent);transition:transform .25s,box-shadow .25s,background .25s;letter-spacing:var(--btn-ls,0);text-transform:var(--btn-tt,none);border:2px solid var(--accent)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px -12px var(--accent)}
+.btn svg{width:19px;height:19px}
+.btn-ghost{background:transparent;color:var(--hero-ink);border-color:currentColor}
+.btn-ghost:hover{box-shadow:none;background:color-mix(in srgb,var(--hero-ink) 12%,transparent)}
+.btn-alt{background:var(--on-hl);color:var(--hl-bg);border-color:var(--on-hl)}
+.nav .btn{padding:11px 20px;font-size:.88rem}
+/* hero */
+.hero{padding:0;color:var(--hero-ink)}
+.hero h1{font-size:clamp(2.8rem,7vw,5.6rem);margin-bottom:22px}
+.hero h1 em{font-style:var(--em-style,italic);color:var(--accent)}
+.hero .lead{font-size:1.12rem;max-width:540px;opacity:.88;margin-bottom:34px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.stats{display:flex;gap:42px;margin-top:48px;flex-wrap:wrap}
+.stats b{display:block;font-family:var(--head);font-size:2.2rem;line-height:1;color:var(--accent);font-weight:var(--head-w,700)}
+.stats span{font-size:.85rem;opacity:.75}
+/* offre */
+.offer-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:50px}
+.offer-head p.sub{max-width:460px;color:var(--muted)}
+.items{display:grid;grid-template-columns:repeat(var(--cols,3),1fr);gap:var(--gap,22px)}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.item:hover{transform:translateY(-6px);box-shadow:0 24px 50px -28px var(--shadow);border-color:var(--accent)}
+.item-top{display:flex;justify-content:space-between;gap:16px;align-items:baseline;margin-bottom:10px}
+.item h3{font-size:1.35rem}
+.price{font-family:var(--head);color:var(--accent);font-weight:700;white-space:nowrap}
+.item p{color:var(--muted);font-size:.95rem}
+/* highlight */
+.highlight{padding:0}
+.hl{background:var(--hl-bg);color:var(--on-hl);border-radius:calc(var(--r) * 1.6);padding:60px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;position:relative;overflow:hidden}
+.hl h2{margin-bottom:10px}
+.hl p:not(.eyebrow){opacity:.85;max-width:560px}
+.hl .eyebrow{color:inherit;opacity:.7}
+/* galerie */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:14px;margin-top:46px}
+.gallery figure{overflow:hidden;border-radius:var(--r)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.gallery figure:hover img{transform:scale(1.07)}
+.gallery .g0{grid-column:span 2;grid-row:span 2}
+.gallery .g3{grid-column:span 2}
+.gallery .g1:nth-last-child(2),.gallery .g2:last-child{grid-column:span 2}
+/* avis */
+.reviews{background:var(--surface-2)}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+.rev{background:var(--surface);border-radius:var(--r);padding:34px;border:1px solid var(--line);position:relative}
+.rev::before{content:"“";font-family:var(--head);font-size:5rem;line-height:.6;color:var(--accent);opacity:.35;display:block;height:34px}
+.rev p{font-size:1.05rem;margin-bottom:18px}
+.rev cite{font-style:normal;font-size:.85rem;color:var(--muted);font-weight:600}
+/* infos */
+.info{display:grid;grid-template-columns:1fr 1.25fr;gap:34px;margin-top:46px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:36px}
+.card ul{list-style:none}
+.card li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px dashed var(--line)}
+.card li:last-child{border:0}
+.card li span:last-child{font-weight:600;text-align:right}
+.contact{margin:26px 0;display:grid;gap:8px;color:var(--muted)}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:400px;filter:var(--map-filter,none)}
+.map iframe{width:100%;height:100%;min-height:400px;border:0}
+/* footer */
+footer{background:var(--foot-bg);color:var(--foot-ink);padding:50px 0 40px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer .brand{color:inherit}
+footer small{opacity:.6}
+.fab{position:fixed;right:22px;bottom:22px;z-index:70;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);animation:pulse 2.6s infinite}
+.fab svg{width:30px;height:30px}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.fab{animation:none}}
+
+.hero{min-height:min(calc(100vh - 34px),880px);display:flex;align-items:flex-end;margin-top:-76px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.06);animation:kb 18s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero-shade{position:absolute;inset:0;background:var(--shade)}
+.hero-in{position:relative;padding-top:180px;padding-bottom:90px;width:100%}
+header:not(.solid) .brand,header:not(.solid) .links{color:#fff}
+
+.noir .hero h1 em,.noir h2 em{color:var(--accent);font-style:italic}
+.noir .eyebrow{letter-spacing:.35em;font-weight:500}
+.noir .eyebrow::before{content:"";display:inline-block;width:40px;height:1px;background:var(--accent);vertical-align:middle;margin-right:14px}
+.noir .hero-in{max-width:1180px}
+.noir .hero .lead{max-width:480px}
+.noir .items{--gap:0;border-top:1px solid var(--line)}
+.noir .item{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:34px 28px}
+.noir .item:nth-child(3n+2){border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.noir .item:hover{background:var(--surface);transform:none;box-shadow:none}
+.noir .item h3{font-size:1.6rem;font-style:italic}
+.noir .gallery figure{border-radius:0}
+.noir .gallery img{filter:saturate(.85) contrast(1.05)}
+.noir .rev{background:transparent;border:1px solid var(--line)}
+.noir .rev p{font-family:var(--head);font-style:italic;font-size:1.25rem}
+.noir .card{background:transparent}
+.noir footer{border-top:1px solid var(--line)}
+@media (max-width:960px){.noir .item:nth-child(3n+2){border-left:0;border-right:0}}
+
+@media (max-width:960px){
+  .links{display:none}
+  .items{grid-template-columns:1fr 1fr}
+  .revs,.info{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
+  .hl{padding:40px}
+}
+@media (max-width:620px){
+  section{padding:76px 0}
+  .wrap{padding-left:16px;padding-right:16px}
+  .nav{height:68px}
+  .nav .btn{padding:0 14px;height:40px;font-size:.78rem;letter-spacing:.02em}
+  .nav .btn svg{display:none}
+  .brand{font-size:1.2rem}
+  .hero .lead{font-size:1rem;margin-bottom:26px}
+  .cta{flex-direction:column;align-items:stretch}
+  .cta .btn{justify-content:center}
+  .stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:space-between;gap:14px;margin-top:36px}
+  .stats b{font-size:1.55rem}
+  .stats span{font-size:.74rem;display:block;line-height:1.3}
+  .offer-head{margin-bottom:34px}
+  .item{padding:24px}
+  .rev{padding:26px}
+  .card{padding:26px 22px}
+  .map,.map iframe{min-height:300px}
+  .fab{width:54px;height:54px;right:16px;bottom:16px}
+  .items{grid-template-columns:1fr}
+  .gallery .g0,.gallery .g3{grid-column:span 2}
+.gallery .g1:nth-last-child(2),.gallery .g2:last-child{grid-column:span 2}
+  .gallery .g0{grid-row:span 1}
+  .hl{padding:32px 24px}
+}
+@media (max-width:620px){.noir .hero h1{font-size:clamp(2.6rem,12vw,3.6rem)}.noir .hero-in{padding-top:140px}.noir .eyebrow::before{width:24px;margin-right:10px}}@media (max-width:960px){.noir .hero-shade{background:linear-gradient(180deg,rgba(15,13,11,.78),rgba(15,13,11,.86) 45%,rgba(15,13,11,.98))}}
+</style>
+</head>
+<body class="noir">
+<div class="demo">Maquette de démonstration proposée par Hope Silas · site non officiel</div>
+<header id="top"><div class="wrap nav"><a href="#" class="brand">Le Teranga</a><nav class="links"><a href="#carte">La carte</a><a href="#galerie">Le lieu</a><a href="#avis">Avis</a><a href="#infos">Réserver</a></nav><a class="btn" href="tel:+2290121302929" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>Réserver</a></div></header>
+
+<section class="hero"><div class="hero-bg" style="background-image:url(https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T0hdftk5B342j7K8EmQsrgRwmL9EnkkCJQwSPJumXJtFGsAtoExknMt3W6PCC0F-E4Ueg35WoOTDJIGcJUzBVC_AWavblFoFiBQyy95y8UAWiHLJA5mPLlAzaIm92WXk0v1YQlCQ=w1600)"></div><div class="hero-shade"></div><div class="wrap hero-in"><p class="eyebrow">Restaurant · Cotonou · depuis toujours</p><h1>Une valeur sûre<br><em>de Cotonou.</em></h1><p class="lead">Terrasse ombragée ou salle feutrée : deux ambiances, une même exigence. Cuisine fraîche, service attentionné, tables dressées pour vos dîners comme pour vos repas d'affaires.</p><div class="cta"><a class="btn" href="tel:+2290121302929" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>Réserver</a><a class="btn btn-ghost" href="#galerie">Découvrir le lieu</a></div><div class="stats"><div><b>4,1★</b><span>1 110 avis Google</span></div><div><b>2</b><span>salles : terrasse &amp; intérieur</span></div><div><b>Affaires</b><span>&amp; dîners en famille</span></div></div></div></section>
+
+<section id="carte" class="offer"><div class="wrap"><div class="offer-head"><div><p class="eyebrow">La carte</p><h2>Saveurs d'ici <em>& d'ailleurs</em></h2></div><p class="sub">Pizzas au feu, manakiches, grillades et salades fraîches. Carte complète sur place.</p></div><div class="items"><article class="item reveal"><div class="item-top"><h3>Pizzas</h3></div><p>Margherita, quatre saisons, Napolitaine, Teranga… pâte fine et généreuse.</p></article><article class="item reveal"><div class="item-top"><h3>Manakiches</h3></div><p>Le classique libanais : zaatar, fromage ou viande, tout juste sorti du four.</p></article><article class="item reveal"><div class="item-top"><h3>Grillades</h3></div><p>Viandes et poissons grillés, servis avec frites maison et légumes.</p></article><article class="item reveal"><div class="item-top"><h3>Salades fraîches</h3></div><p>Taboulé, fattouch et salades composées, préparés à la minute.</p></article><article class="item reveal"><div class="item-top"><h3>Plats du jour</h3></div><p>Une suggestion différente chaque jour, selon le marché.</p></article><article class="item reveal"><div class="item-top"><h3>Desserts &amp; boissons</h3></div><p>Douceurs maison, jus frais et carte des vins.</p></article></div></div></section>
+
+
+
+<section id="galerie"><div class="wrap"><p class="eyebrow">Le lieu</p><h2>Tables dressées,<br><em>lumière douce.</em></h2><div class="gallery"><figure class="g0 reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T0hdftk5B342j7K8EmQsrgRwmL9EnkkCJQwSPJumXJtFGsAtoExknMt3W6PCC0F-E4Ueg35WoOTDJIGcJUzBVC_AWavblFoFiBQyy95y8UAWiHLJA5mPLlAzaIm92WXk0v1YQlCQ=w1600" alt="Restaurant Le Teranga – photo 1" loading="lazy"></figure><figure class="g1 reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SnxyJ-nJGSDFGX_qDtDHHRxWEQ9DeRjWl96aPZBuEC68vsSh562RFuh4xEINfC7XHoeb3C3VP8VBI7hhQtLJWPPIKyphk-NzFysc-oRoBUymrhZxbt31uI8PXX4aum127ZrGA=w1600" alt="Restaurant Le Teranga – photo 2" loading="lazy"></figure><figure class="g2 reveal"><img src="https://lh3.googleusercontent.com/grass-cs/AABkmLcW81YHFx7d12vofO1iyQLbwWMeDINJ2uI25keta_lg-dKu2lgSpbFrk-KX88A0JtUi8BgOBF1MVMewLUvPHm79ilVbudPwAbx65oS432j_U1FLEFBo9KV0WucPsNOdt7Dc0pRcQA=w1600" alt="Restaurant Le Teranga – photo 3" loading="lazy"></figure><figure class="g3 reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9R0XqUGEznKrPVxL9pCMfd7BLuS2s95_UFeyRHamt1vaSnXjF7U06U_GIrxzaE7vpXtgWqmAoKfgmBrH0ZsWSV_meRLlDV3aJNBZOw73t07XvYDdWSpDGfC432611Zuz8Ci2eXT=w1600" alt="Restaurant Le Teranga – photo 4" loading="lazy"></figure></div></div></section>
+
+<section id="avis" class="reviews"><div class="wrap"><p class="eyebrow">Avis clients</p><h2>Ce qu&#x27;en disent nos hôtes</h2><div class="revs"><blockquote class="rev reveal"><p>« Si vous ne connaissez pas, vous ratez une valeur sûre de Cotonou. Le cadre est toujours impeccable, avec un personnel plus qu&#x27;accueillant. »</p><cite>Avis Google</cite></blockquote><blockquote class="rev reveal"><p>« J&#x27;y ai déjà été plusieurs fois et jamais déçue. On a le choix entre la terrasse et l&#x27;intérieur, deux mondes positivement différents. »</p><cite>Avis Google</cite></blockquote><blockquote class="rev reveal"><p>« Tout est frais et bon, une ambiance calme. Idéal pour un repas d&#x27;affaires. »</p><cite>Avis Google (traduit)</cite></blockquote></div></div></section>
+
+<section id="infos"><div class="wrap"><p class="eyebrow">Horaires &amp; accès</p><h2>Votre table vous attend</h2><div class="info"><div class="card"><ul><li><span>Horaires</span><span>Sur demande</span></li></ul><div class="contact"><div>📍 Cotonou</div><div>📞 +229 01 21 30 29 29</div></div><a class="btn" href="tel:+2290121302929" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>Réserver par téléphone</a></div><div class="map"><iframe loading="lazy" title="Plan d'accès Restaurant Le Teranga" src="https://maps.google.com/maps?q=6.3568378,2.3911022&z=16&output=embed"></iframe></div></div></div></section>
+
+<footer><div class="wrap"><div><div class="brand">Le Teranga</div><small>Restaurant · Cotonou · ★ 4,1 (1 110 avis Google)</small></div><small>Maquette réalisée par Hope Silas</small></div></footer>
+
+<a class="fab" href="tel:+2290121302929" target="_blank" rel="noopener" aria-label="Appeler"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></a>
+<script>
+document.body.classList.add('js');
+const hd=document.querySelector('header');const onS=()=>hd.classList.toggle('solid',scrollY>40);onS();addEventListener('scroll',onS,{passive:true});
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));}else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+</script>
+<!-- lightbox:start -->
+<style>
+main img,section img,figure img,.frame img,.r-media img{cursor:zoom-in}
+.peek img,.lbx img{cursor:default}
+.lbx{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:56px 70px;background:rgba(10,10,10,.55);-webkit-backdrop-filter:blur(18px) saturate(.9);backdrop-filter:blur(18px) saturate(.9);opacity:0;visibility:hidden;transition:opacity .35s cubic-bezier(.22,1,.36,1),visibility .35s}
+.lbx.on{opacity:1;visibility:visible}
+.lbx figure{position:relative;margin:0;max-width:100%;max-height:100%;display:flex;flex-direction:column;align-items:center;gap:14px}
+.lbx img{display:block;max-width:min(92vw,1800px);max-height:calc(100vh - 150px);width:auto;height:auto;object-fit:contain;border-radius:10px;box-shadow:0 2px 4px rgba(0,0,0,.25),0 40px 90px -30px rgba(0,0,0,.8);transform:scale(.92);opacity:0;transition:transform .45s cubic-bezier(.22,1,.36,1),opacity .35s}
+.lbx.on img.ready{transform:none;opacity:1}
+.lbx figcaption{font:500 .85rem/1.4 system-ui,sans-serif;color:rgba(255,255,255,.85);text-align:center}
+.lbx figcaption span{opacity:.6;margin-left:10px}
+.lbx button{position:absolute;border:0;cursor:pointer;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.14);color:#fff;font:400 1.6rem/1 system-ui,sans-serif;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.2);transition:background .25s,transform .25s}
+.lbx button:hover{background:rgba(255,255,255,.26)}
+.lbx button:active{transform:scale(.92)}
+.lbx .x{top:18px;right:18px;font-size:1.4rem}
+.lbx .pv{left:16px;top:50%;margin-top:-26px}
+.lbx .nx{right:16px;top:50%;margin-top:-26px}
+.lbx .spin{position:absolute;width:34px;height:34px;border-radius:50%;border:3px solid rgba(255,255,255,.25);border-top-color:#fff;animation:lbxs .8s linear infinite}
+.lbx img.ready+.spin,.lbx .spin.off{display:none}
+@keyframes lbxs{to{transform:rotate(360deg)}}
+html.lbx-lock,html.lbx-lock body{overflow:hidden}
+@media (max-width:640px){.lbx{padding:60px 10px 40px}.lbx img{max-width:96vw;max-height:calc(100vh - 170px)}.lbx .pv,.lbx .nx{top:auto;bottom:14px;margin:0;width:46px;height:46px}.lbx .pv{left:calc(50% - 56px)}.lbx .nx{right:calc(50% - 56px)}}
+@media (prefers-reduced-motion:reduce){.lbx,.lbx img{transition:none}}
+</style>
+<div class="lbx" id="lbx" role="dialog" aria-modal="true" aria-label="Photo en grand">
+  <figure><img alt=""><span class="spin"></span><figcaption></figcaption></figure>
+  <button class="x" aria-label="Fermer">✕</button><button class="pv" aria-label="Photo précédente">‹</button><button class="nx" aria-label="Photo suivante">›</button>
+</div>
+<script>
+(()=>{const d=document,box=d.getElementById('lbx'),im=box.querySelector('img'),cap=box.querySelector('figcaption'),spin=box.querySelector('.spin');
+const full=s=>s.replace(/=w\d+(-h\d+)?[^/]*$/,'=s2560');
+const pick=()=>[...new Set([...d.querySelectorAll('img')].filter(i=>!i.closest('.lbx,.peek,[aria-hidden="true"],header,footer')&&/googleusercontent/.test(i.src)&&!(i.closest('.stage')&&!i.classList.contains('on'))).map(i=>i.src))];
+let list=[],k=0,last=null;
+const show=n=>{k=(n+list.length)%list.length;im.classList.remove('ready');spin.classList.remove('off');const src=list[k],hi=full(src);
+  im.onload=()=>{im.classList.add('ready');spin.classList.add('off')};im.src=src;const pre=new Image();pre.onload=()=>{if(list[k]===src)im.src=hi};pre.src=hi;
+  const el=[...d.querySelectorAll('img')].find(i=>i.src===src);cap.innerHTML=(el&&el.alt?el.alt:'')+'<span>'+(k+1)+' / '+list.length+'</span>';
+  box.querySelector('.pv').style.display=box.querySelector('.nx').style.display=list.length>1?'':'none'};
+const open=src=>{list=pick();k=Math.max(0,list.indexOf(src));last=d.activeElement;d.documentElement.classList.add('lbx-lock');box.classList.add('on');show(k);box.querySelector('.x').focus({preventScroll:true})};
+const close=()=>{box.classList.remove('on');d.documentElement.classList.remove('lbx-lock');last&&last.focus&&last.focus({preventScroll:true})};
+d.addEventListener('click',e=>{if(box.contains(e.target))return;let t=e.target.closest('img');const st=e.target.closest('.stage');if(st)t=st.querySelector('img.on');
+  if(!t||t.closest('.peek,header,footer,[aria-hidden="true"]')||!/googleusercontent/.test(t.src))return;e.preventDefault();open(t.src)});
+box.addEventListener('click',e=>{if(e.target===box||e.target.tagName==='FIGURE')close()});
+box.querySelector('.x').onclick=close;box.querySelector('.pv').onclick=e=>{e.stopPropagation();show(k-1)};box.querySelector('.nx').onclick=e=>{e.stopPropagation();show(k+1)};
+d.addEventListener('keydown',e=>{if(!box.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')show(k+1);if(e.key==='ArrowLeft')show(k-1)});
+let x0=null;box.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});box.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(k+(dx<0?1:-1));x0=null});
+})();
+</script>
+<!-- lightbox:end -->
+</body>
+</html>

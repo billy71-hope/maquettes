@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>L&#x27;Imprévu – Restaurant à Cotonou</title>
+<meta name="description" content="L&#x27;Imprévu, restaurant à Ganhi face à Ecobank : déjeuners d&#x27;affaires, dîners entre amis, cocktails et smoothies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--r:18px;--btn-r:999px;--line:rgba(0,0,0,.09);--shadow:rgba(0,0,0,.35);--bg:#f6f1ea;--surface:#fffdf9;--surface-2:#ece4d8;--ink:#2a211b;--muted:#6f6257;--accent:#c4552d;--on-accent:#fff;--head:'DM Serif Display',serif;--head-w:400;--body:'DM Sans',sans-serif;--nav-bg:rgba(246,241,234,.9);--nav-ink:#2a211b;--hero-ink:#2a211b;--hero-r:240px 240px 24px 24px;--hl-bg:#3d5a47;--on-hl:#f6f1ea;--foot-bg:#2a211b;--foot-ink:#d9cfc2;--r:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);font-weight:var(--head-w,700);line-height:1.05;letter-spacing:var(--head-ls,0);text-transform:var(--head-tt,none)}
+h2{font-size:clamp(2rem,4.4vw,3.3rem);margin-bottom:18px}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:14px}
+section{padding:110px 0;position:relative}
+.demo{background:#111;color:#ddd;text-align:center;font:500 .78rem/1.4 system-ui,sans-serif;padding:8px 16px;position:relative;z-index:60}
+/* nav */
+header{position:sticky;top:0;z-index:50;transition:background .3s,box-shadow .3s}
+header.solid{background:var(--nav-bg);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font-family:var(--head);font-size:1.5rem;font-weight:var(--head-w,700);letter-spacing:var(--head-ls,0);text-transform:var(--head-tt,none);color:var(--nav-ink)}
+.brand i{color:var(--accent);font-style:normal}
+.links{display:flex;gap:30px;font-size:.92rem;font-weight:500;color:var(--nav-ink)}
+.links a{opacity:.8;transition:opacity .2s}
+.links a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:var(--btn-r);font-weight:700;font-size:.95rem;background:var(--accent);color:var(--on-accent);transition:transform .25s,box-shadow .25s,background .25s;letter-spacing:var(--btn-ls,0);text-transform:var(--btn-tt,none);border:2px solid var(--accent)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px -12px var(--accent)}
+.btn svg{width:19px;height:19px}
+.btn-ghost{background:transparent;color:var(--hero-ink);border-color:currentColor}
+.btn-ghost:hover{box-shadow:none;background:color-mix(in srgb,var(--hero-ink) 12%,transparent)}
+.btn-alt{background:var(--on-hl);color:var(--hl-bg);border-color:var(--on-hl)}
+.nav .btn{padding:11px 20px;font-size:.88rem}
+/* hero */
+.hero{padding:0;color:var(--hero-ink)}
+.hero h1{font-size:clamp(2.8rem,7vw,5.6rem);margin-bottom:22px}
+.hero h1 em{font-style:var(--em-style,italic);color:var(--accent)}
+.hero .lead{font-size:1.12rem;max-width:540px;opacity:.88;margin-bottom:34px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.stats{display:flex;gap:42px;margin-top:48px;flex-wrap:wrap}
+.stats b{display:block;font-family:var(--head);font-size:2.2rem;line-height:1;color:var(--accent);font-weight:var(--head-w,700)}
+.stats span{font-size:.85rem;opacity:.75}
+/* offre */
+.offer-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:50px}
+.offer-head p.sub{max-width:460px;color:var(--muted)}
+.items{display:grid;grid-template-columns:repeat(var(--cols,3),1fr);gap:var(--gap,22px)}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.item:hover{transform:translateY(-6px);box-shadow:0 24px 50px -28px var(--shadow);border-color:var(--accent)}
+.item-top{display:flex;justify-content:space-between;gap:16px;align-items:baseline;margin-bottom:10px}
+.item h3{font-size:1.35rem}
+.price{font-family:var(--head);color:var(--accent);font-weight:700;white-space:nowrap}
+.item p{color:var(--muted);font-size:.95rem}
+/* highlight */
+.highlight{padding:0}
+.hl{background:var(--hl-bg);color:var(--on-hl);border-radius:calc(var(--r) * 1.6);padding:60px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;position:relative;overflow:hidden}
+.hl h2{margin-bottom:10px}
+.hl p:not(.eyebrow){opacity:.85;max-width:560px}
+.hl .eyebrow{color:inherit;opacity:.7}
+/* galerie */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:14px;margin-top:46px}
+.gallery figure{overflow:hidden;border-radius:var(--r)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.gallery figure:hover img{transform:scale(1.07)}
+.gallery .g0{grid-column:span 2;grid-row:span 2}
+.gallery .g3{grid-column:span 2}
+.gallery .g1:nth-last-child(2),.gallery .g2:last-child{grid-column:span 2}
+/* avis */
+.reviews{background:var(--surface-2)}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+.rev{background:var(--surface);border-radius:var(--r);padding:34px;border:1px solid var(--line);position:relative}
+.rev::before{content:"“";font-family:var(--head);font-size:5rem;line-height:.6;color:var(--accent);opacity:.35;display:block;height:34px}
+.rev p{font-size:1.05rem;margin-bottom:18px}
+.rev cite{font-style:normal;font-size:.85rem;color:var(--muted);font-weight:600}
+/* infos */
+.info{display:grid;grid-template-columns:1fr 1.25fr;gap:34px;margin-top:46px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:36px}
+.card ul{list-style:none}
+.card li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px dashed var(--line)}
+.card li:last-child{border:0}
+.card li span:last-child{font-weight:600;text-align:right}
+.contact{margin:26px 0;display:grid;gap:8px;color:var(--muted)}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:400px;filter:var(--map-filter,none)}
+.map iframe{width:100%;height:100%;min-height:400px;border:0}
+/* footer */
+footer{background:var(--foot-bg);color:var(--foot-ink);padding:50px 0 40px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer .brand{color:inherit}
+footer small{opacity:.6}
+.fab{position:fixed;right:22px;bottom:22px;z-index:70;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);animation:pulse 2.6s infinite}
+.fab svg{width:30px;height:30px}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.fab{animation:none}}
+
+.hero{padding:40px 0 100px}
+.split>*{min-width:0}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.split-img{position:relative;height:600px}
+.split-img .main{position:absolute;inset:0 0 0 12%;width:88%;height:100%;object-fit:cover;border-radius:var(--hero-r)}
+.split-img .sub{position:absolute;left:0;bottom:40px;width:42%;height:42%;object-fit:cover;border-radius:var(--r);border:8px solid var(--bg);box-shadow:0 30px 60px -30px var(--shadow)}
+@media (max-width:960px){.split{grid-template-columns:1fr}.split-img{height:440px}}
+
+.bistro h1 em,.bistro h2 em{color:var(--accent)}
+.bistro .hero h1{font-size:clamp(3rem,7.4vw,6rem)}
+.bistro .split-img::before{content:"";position:absolute;right:-30px;top:-30px;width:180px;height:180px;border-radius:50%;background:var(--accent);opacity:.9}
+.bistro .split-img::after{content:"Ouvert midi & soir";position:absolute;right:-6px;top:40px;transform:rotate(12deg);background:#3d5a47;color:#fff;font-weight:700;font-size:.85rem;padding:10px 16px;border-radius:99px}
+.bistro .item{border:0;background:transparent;border-top:2px solid var(--ink);border-radius:0;padding:26px 4px 10px}
+.bistro .item:hover{transform:none;box-shadow:none;border-color:var(--accent)}
+.bistro .item h3{font-size:1.5rem}
+.bistro .gallery{grid-auto-rows:260px}
+.bistro .gallery figure{border-radius:200px 200px 16px 16px}
+.bistro .gallery .g0{border-radius:16px}
+
+@media (max-width:960px){
+  .links{display:none}
+  .items{grid-template-columns:1fr 1fr}
+  .revs,.info{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
+  .hl{padding:40px}
+}
+@media (max-width:620px){
+  section{padding:76px 0}
+  .wrap{padding-left:16px;padding-right:16px}
+  .nav{height:68px}
+  .nav .btn{padding:0 14px;height:40px;font-size:.78rem;letter-spacing:.02em}
+  .nav .btn svg{display:none}
+  .brand{font-size:1.2rem}
+  .hero .lead{font-size:1rem;margin-bottom:26px}
+  .cta{flex-direction:column;align-items:stretch}
+  .cta .btn{justify-content:center}
+  .stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:space-between;gap:14px;margin-top:36px}
+  .stats b{font-size:1.55rem}
+  .stats span{font-size:.74rem;display:block;line-height:1.3}
+  .offer-head{margin-bottom:34px}
+  .item{padding:24px}
+  .rev{padding:26px}
+  .card{padding:26px 22px}
+  .map,.map iframe{min-height:300px}
+  .fab{width:54px;height:54px;right:16px;bottom:16px}
+  .items{grid-template-columns:1fr}
+  .gallery .g0,.gallery .g3{grid-column:span 2}
+.gallery .g1:nth-last-child(2),.gallery .g2:last-child{grid-column:span 2}
+  .gallery .g0{grid-row:span 1}
+  .hl{padding:32px 24px}
+}
+@media (max-width:960px){.bistro .split-img::before{right:0;top:-18px;width:120px;height:120px}.bistro .split-img::after{right:8px;top:24px;font-size:.78rem}}@media (max-width:620px){.bistro .split-img{height:380px}.bistro .hero h1{font-size:clamp(2.6rem,12vw,3.6rem)}}
+</style>
+</head>
+<body class="bistro">
+<div class="demo">Maquette de démonstration proposée par Hope Silas · site non officiel</div>
+<header id="top"><div class="wrap nav"><a href="#" class="brand">L'Imprévu<i>.</i></a><nav class="links"><a href="#carte">La carte</a><a href="#galerie">La salle</a><a href="#infos">Infos pratiques</a></nav><a class="btn" href="https://wa.me/2290166974040?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20%C3%A0%20L%27Impr%C3%A9vu" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>Réserver</a></div></header>
+
+<section class="hero"><div class="wrap split"><div class="split-txt"><p class="eyebrow">Restaurant · Ganhi, Cotonou</p><h1>Le bon goût<br>de <em>l'imprévu.</em></h1><p class="lead">Face à Ecobank, au cœur du quartier des affaires : une salle lumineuse pour vos déjeuners pressés, vos rendez-vous et vos soirées entre amis.</p><div class="cta"><a class="btn" href="https://wa.me/2290166974040?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20%C3%A0%20L%27Impr%C3%A9vu" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>Réserver une table</a><a class="btn btn-ghost" href="#galerie">Voir la salle</a></div><div class="stats"><div><b>4,3★</b><span>646 avis Google</span></div><div><b>Ganhi</b><span>quartier d&#x27;affaires</span></div><div><b>Midi</b><span>&amp; soir</span></div></div></div><div class="split-img"><img class="main" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SbedCg8Yln6_1hszoc528DXKUsRCG3tjaPKGkJgAsfkrIeJ2BIvc29GG1Gx5EVcQM2d1XsEk6PlGZ6Jd4_cw4exa5B6CogbJS2327bFgyGXhRAyWlu7a3w7-LBEWZpJHpKDf6M=w1600" alt=""><img class="sub" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RAEOwKffueeIM9a2PFzQqi-r_W6Dzaz-eOzKgEinIEaADAR3NdTS4VkjCgZQGJeEns_UFxR8bgUVLPA2bTK65HU0qim9Er1GvGFAFsu9U7aCG5UUEX_2QJ9gZlk4N7E2vZr6FEyJVOnCWc=w1600" alt=""></div></div></section>
+
+<section id="carte" class="offer"><div class="wrap"><div class="offer-head"><div><p class="eyebrow">La carte</p><h2>Simple, frais,<br><em>bien fait.</em></h2></div><p class="sub">Une cuisine du marché, des formules rapides le midi et un vrai bar à cocktails et smoothies.</p></div><div class="items"><article class="item reveal"><div class="item-top"><h3>Formules du midi</h3></div><p>Entrée, plat ou dessert : servies rapidement pour votre pause déjeuner.</p></article><article class="item reveal"><div class="item-top"><h3>Plats du jour</h3></div><p>Une suggestion qui change selon le marché et l&#x27;inspiration du chef.</p></article><article class="item reveal"><div class="item-top"><h3>Grillades &amp; poissons</h3></div><p>Viandes et poissons grillés, accompagnements au choix.</p></article><article class="item reveal"><div class="item-top"><h3>Smoothies &amp; milkshakes</h3></div><p>Fruits frais mixés à la minute, à emporter ou sur place.</p></article><article class="item reveal"><div class="item-top"><h3>Cocktails</h3></div><p>Avec ou sans alcool, pour finir la journée en beauté.</p></article><article class="item reveal"><div class="item-top"><h3>Événements</h3></div><p>Privatisation de la salle pour vos repas d&#x27;équipe et anniversaires.</p></article></div></div></section>
+
+<section class="highlight"><div class="wrap hl reveal"><div><p class="eyebrow">Repas d&#x27;affaires</p><h2>Vos rendez-vous à deux pas du bureau</h2><p>Réservez une table au calme pour vos réunions et vos clients. On s&#x27;occupe du reste.</p></div><a class="btn btn-alt" href="https://wa.me/2290166974040?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20%C3%A0%20L%27Impr%C3%A9vu" target="_blank" rel="noopener">Réserver pour midi</a></div></section>
+
+<section id="galerie"><div class="wrap"><p class="eyebrow">La salle</p><h2>Bois blond, grandes baies<br><em>et bonne humeur.</em></h2><div class="gallery"><figure class="g0 reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SbedCg8Yln6_1hszoc528DXKUsRCG3tjaPKGkJgAsfkrIeJ2BIvc29GG1Gx5EVcQM2d1XsEk6PlGZ6Jd4_cw4exa5B6CogbJS2327bFgyGXhRAyWlu7a3w7-LBEWZpJHpKDf6M=w1600" alt="L&#x27;Imprévu – photo 1" loading="lazy"></figure><figure class="g1 reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RAEOwKffueeIM9a2PFzQqi-r_W6Dzaz-eOzKgEinIEaADAR3NdTS4VkjCgZQGJeEns_UFxR8bgUVLPA2bTK65HU0qim9Er1GvGFAFsu9U7aCG5UUEX_2QJ9gZlk4N7E2vZr6FEyJVOnCWc=w1600" alt="L&#x27;Imprévu – photo 2" loading="lazy"></figure><figure class="g2 reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QYB20oNAgRKkm8cEaNaLyCUGNSOcwKHzewUzYINgvacwPeDIk4Sg3l-MFgXtPXDm-Vr8cqURzfQHPqDNO_fbD5vpCjvy3EFwSKgzkZ2b0hxbmO61HsoB4zhN57G9IlfrU6tAgs=w1600" alt="L&#x27;Imprévu – photo 3" loading="lazy"></figure></div></div></section>
+
+
+
+<section id="infos"><div class="wrap"><p class="eyebrow">Horaires &amp; accès</p><h2>Face à Ecobank, à Ganhi</h2><div class="info"><div class="card"><ul><li><span>Horaires</span><span>Sur demande</span></li></ul><div class="contact"><div>📍 Face à ECOBANK Direction Générale, Ganhi, Cotonou</div><div>📞 +229 01 66 97 40 40</div></div><a class="btn" href="https://wa.me/2290166974040?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20%C3%A0%20L%27Impr%C3%A9vu" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>Réserver sur WhatsApp</a></div><div class="map"><iframe loading="lazy" title="Plan d'accès L&#x27;Imprévu" src="https://maps.google.com/maps?q=6.352869,2.4374779&z=16&output=embed"></iframe></div></div></div></section>
+
+<footer><div class="wrap"><div><div class="brand">L'Imprévu<i>.</i></div><small>Restaurant · Cotonou · ★ 4,3 (646 avis Google)</small></div><small>Maquette réalisée par Hope Silas</small></div></footer>
+
+<a class="fab" href="https://wa.me/2290166974040?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20%C3%A0%20L%27Impr%C3%A9vu" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg></a>
+<script>
+document.body.classList.add('js');
+const hd=document.querySelector('header');const onS=()=>hd.classList.toggle('solid',scrollY>40);onS();addEventListener('scroll',onS,{passive:true});
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));}else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+</script>
+<!-- lightbox:start -->
+<style>
+main img,section img,figure img,.frame img,.r-media img{cursor:zoom-in}
+.peek img,.lbx img{cursor:default}
+.lbx{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:56px 70px;background:rgba(10,10,10,.55);-webkit-backdrop-filter:blur(18px) saturate(.9);backdrop-filter:blur(18px) saturate(.9);opacity:0;visibility:hidden;transition:opacity .35s cubic-bezier(.22,1,.36,1),visibility .35s}
+.lbx.on{opacity:1;visibility:visible}
+.lbx figure{position:relative;margin:0;max-width:100%;max-height:100%;display:flex;flex-direction:column;align-items:center;gap:14px}
+.lbx img{display:block;max-width:min(92vw,1800px);max-height:calc(100vh - 150px);width:auto;height:auto;object-fit:contain;border-radius:10px;box-shadow:0 2px 4px rgba(0,0,0,.25),0 40px 90px -30px rgba(0,0,0,.8);transform:scale(.92);opacity:0;transition:transform .45s cubic-bezier(.22,1,.36,1),opacity .35s}
+.lbx.on img.ready{transform:none;opacity:1}
+.lbx figcaption{font:500 .85rem/1.4 system-ui,sans-serif;color:rgba(255,255,255,.85);text-align:center}
+.lbx figcaption span{opacity:.6;margin-left:10px}
+.lbx button{position:absolute;border:0;cursor:pointer;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.14);color:#fff;font:400 1.6rem/1 system-ui,sans-serif;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.2);transition:background .25s,transform .25s}
+.lbx button:hover{background:rgba(255,255,255,.26)}
+.lbx button:active{transform:scale(.92)}
+.lbx .x{top:18px;right:18px;font-size:1.4rem}
+.lbx .pv{left:16px;top:50%;margin-top:-26px}
+.lbx .nx{right:16px;top:50%;margin-top:-26px}
+.lbx .spin{position:absolute;width:34px;height:34px;border-radius:50%;border:3px solid rgba(255,255,255,.25);border-top-color:#fff;animation:lbxs .8s linear infinite}
+.lbx img.ready+.spin,.lbx .spin.off{display:none}
+@keyframes lbxs{to{transform:rotate(360deg)}}
+html.lbx-lock,html.lbx-lock body{overflow:hidden}
+@media (max-width:640px){.lbx{padding:60px 10px 40px}.lbx img{max-width:96vw;max-height:calc(100vh - 170px)}.lbx .pv,.lbx .nx{top:auto;bottom:14px;margin:0;width:46px;height:46px}.lbx .pv{left:calc(50% - 56px)}.lbx .nx{right:calc(50% - 56px)}}
+@media (prefers-reduced-motion:reduce){.lbx,.lbx img{transition:none}}
+</style>
+<div class="lbx" id="lbx" role="dialog" aria-modal="true" aria-label="Photo en grand">
+  <figure><img alt=""><span class="spin"></span><figcaption></figcaption></figure>
+  <button class="x" aria-label="Fermer">✕</button><button class="pv" aria-label="Photo précédente">‹</button><button class="nx" aria-label="Photo suivante">›</button>
+</div>
+<script>
+(()=>{const d=document,box=d.getElementById('lbx'),im=box.querySelector('img'),cap=box.querySelector('figcaption'),spin=box.querySelector('.spin');
+const full=s=>s.replace(/=w\d+(-h\d+)?[^/]*$/,'=s2560');
+const pick=()=>[...new Set([...d.querySelectorAll('img')].filter(i=>!i.closest('.lbx,.peek,[aria-hidden="true"],header,footer')&&/googleusercontent/.test(i.src)&&!(i.closest('.stage')&&!i.classList.contains('on'))).map(i=>i.src))];
+let list=[],k=0,last=null;
+const show=n=>{k=(n+list.length)%list.length;im.classList.remove('ready');spin.classList.remove('off');const src=list[k],hi=full(src);
+  im.onload=()=>{im.classList.add('ready');spin.classList.add('off')};im.src=src;const pre=new Image();pre.onload=()=>{if(list[k]===src)im.src=hi};pre.src=hi;
+  const el=[...d.querySelectorAll('img')].find(i=>i.src===src);cap.innerHTML=(el&&el.alt?el.alt:'')+'<span>'+(k+1)+' / '+list.length+'</span>';
+  box.querySelector('.pv').style.display=box.querySelector('.nx').style.display=list.length>1?'':'none'};
+const open=src=>{list=pick();k=Math.max(0,list.indexOf(src));last=d.activeElement;d.documentElement.classList.add('lbx-lock');box.classList.add('on');show(k);box.querySelector('.x').focus({preventScroll:true})};
+const close=()=>{box.classList.remove('on');d.documentElement.classList.remove('lbx-lock');last&&last.focus&&last.focus({preventScroll:true})};
+d.addEventListener('click',e=>{if(box.contains(e.target))return;let t=e.target.closest('img');const st=e.target.closest('.stage');if(st)t=st.querySelector('img.on');
+  if(!t||t.closest('.peek,header,footer,[aria-hidden="true"]')||!/googleusercontent/.test(t.src))return;e.preventDefault();open(t.src)});
+box.addEventListener('click',e=>{if(e.target===box||e.target.tagName==='FIGURE')close()});
+box.querySelector('.x').onclick=close;box.querySelector('.pv').onclick=e=>{e.stopPropagation();show(k-1)};box.querySelector('.nx').onclick=e=>{e.stopPropagation();show(k+1)};
+d.addEventListener('keydown',e=>{if(!box.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')show(k+1);if(e.key==='ArrowLeft')show(k-1)});
+let x0=null;box.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});box.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(k+(dx<0?1:-1));x0=null});
+})();
+</script>
+<!-- lightbox:end -->
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ya Hala – Restaurant libanais à Cotonou</title>
+<meta name="description" content="Ya Hala, restaurant libanais chaleureux à Cotonou : mezzés, grillades et le fameux filet de poisson à l&#x27;ail.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Amiri:ital@0;1&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--r:18px;--btn-r:999px;--line:rgba(0,0,0,.09);--shadow:rgba(0,0,0,.35);--bg:#f7f0e3;--surface:#fffaf1;--surface-2:#efe3cd;--ink:#2b2a1d;--muted:#6b664f;--accent:#b8862f;--on-accent:#fff;--head:'Marcellus',serif;--head-w:400;--body:'Karla',sans-serif;--nav-bg:rgba(247,240,227,.92);--nav-ink:#2b2a1d;--hero-ink:#fdf7ea;--hl-bg:#3f4a2a;--on-hl:#fdf7ea;--foot-bg:#2f3720;--foot-ink:#e3dcc4;--r:14px;--btn-r:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);font-weight:var(--head-w,700);line-height:1.05;letter-spacing:var(--head-ls,0);text-transform:var(--head-tt,none)}
+h2{font-size:clamp(2rem,4.4vw,3.3rem);margin-bottom:18px}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--accent);margin-bottom:14px}
+section{padding:110px 0;position:relative}
+.demo{background:#111;color:#ddd;text-align:center;font:500 .78rem/1.4 system-ui,sans-serif;padding:8px 16px;position:relative;z-index:60}
+/* nav */
+header{position:sticky;top:0;z-index:50;transition:background .3s,box-shadow .3s}
+header.solid{background:var(--nav-bg);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font-family:var(--head);font-size:1.5rem;font-weight:var(--head-w,700);letter-spacing:var(--head-ls,0);text-transform:var(--head-tt,none);color:var(--nav-ink)}
+.brand i{color:var(--accent);font-style:normal}
+.links{display:flex;gap:30px;font-size:.92rem;font-weight:500;color:var(--nav-ink)}
+.links a{opacity:.8;transition:opacity .2s}
+.links a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:var(--btn-r);font-weight:700;font-size:.95rem;background:var(--accent);color:var(--on-accent);transition:transform .25s,box-shadow .25s,background .25s;letter-spacing:var(--btn-ls,0);text-transform:var(--btn-tt,none);border:2px solid var(--accent)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px -12px var(--accent)}
+.btn svg{width:19px;height:19px}
+.btn-ghost{background:transparent;color:var(--hero-ink);border-color:currentColor}
+.btn-ghost:hover{box-shadow:none;background:color-mix(in srgb,var(--hero-ink) 12%,transparent)}
+.btn-alt{background:var(--on-hl);color:var(--hl-bg);border-color:var(--on-hl)}
+.nav .btn{padding:11px 20px;font-size:.88rem}
+/* hero */
+.hero{padding:0;color:var(--hero-ink)}
+.hero h1{font-size:clamp(2.8rem,7vw,5.6rem);margin-bottom:22px}
+.hero h1 em{font-style:var(--em-style,italic);color:var(--accent)}
+.hero .lead{font-size:1.12rem;max-width:540px;opacity:.88;margin-bottom:34px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.stats{display:flex;gap:42px;margin-top:48px;flex-wrap:wrap}
+.stats b{display:block;font-family:var(--head);font-size:2.2rem;line-height:1;color:var(--accent);font-weight:var(--head-w,700)}
+.stats span{font-size:.85rem;opacity:.75}
+/* offre */
+.offer-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:50px}
+.offer-head p.sub{max-width:460px;color:var(--muted)}
+.items{display:grid;grid-template-columns:repeat(var(--cols,3),1fr);gap:var(--gap,22px)}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:30px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.item:hover{transform:translateY(-6px);box-shadow:0 24px 50px -28px var(--shadow);border-color:var(--accent)}
+.item-top{display:flex;justify-content:space-between;gap:16px;align-items:baseline;margin-bottom:10px}
+.item h3{font-size:1.35rem}
+.price{font-family:var(--head);color:var(--accent);font-weight:700;white-space:nowrap}
+.item p{color:var(--muted);font-size:.95rem}
+/* highlight */
+.highlight{padding:0}
+.hl{background:var(--hl-bg);color:var(--on-hl);border-radius:calc(var(--r) * 1.6);padding:60px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;position:relative;overflow:hidden}
+.hl h2{margin-bottom:10px}
+.hl p:not(.eyebrow){opacity:.85;max-width:560px}
+.hl .eyebrow{color:inherit;opacity:.7}
+/* galerie */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:14px;margin-top:46px}
+.gallery figure{overflow:hidden;border-radius:var(--r)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.gallery figure:hover img{transform:scale(1.07)}
+.gallery .g0{grid-column:span 2;grid-row:span 2}
+.gallery .g3{grid-column:span 2}
+.gallery .g1:nth-last-child(2),.gallery .g2:last-child{grid-column:span 2}
+/* avis */
+.reviews{background:var(--surface-2)}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+.rev{background:var(--surface);border-radius:var(--r);padding:34px;border:1px solid var(--line);position:relative}
+.rev::before{content:"“";font-family:var(--head);font-size:5rem;line-height:.6;color:var(--accent);opacity:.35;display:block;height:34px}
+.rev p{font-size:1.05rem;margin-bottom:18px}
+.rev cite{font-style:normal;font-size:.85rem;color:var(--muted);font-weight:600}
+/* infos */
+.info{display:grid;grid-template-columns:1fr 1.25fr;gap:34px;margin-top:46px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:36px}
+.card ul{list-style:none}
+.card li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px dashed var(--line)}
+.card li:last-child{border:0}
+.card li span:last-child{font-weight:600;text-align:right}
+.contact{margin:26px 0;display:grid;gap:8px;color:var(--muted)}
+.map{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);min-height:400px;filter:var(--map-filter,none)}
+.map iframe{width:100%;height:100%;min-height:400px;border:0}
+/* footer */
+footer{background:var(--foot-bg);color:var(--foot-ink);padding:50px 0 40px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer .brand{color:inherit}
+footer small{opacity:.6}
+.fab{position:fixed;right:22px;bottom:22px;z-index:70;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);animation:pulse 2.6s infinite}
+.fab svg{width:30px;height:30px}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.fab{animation:none}}
+
+.levant .hero{background:var(--hl-bg);overflow:hidden;margin-top:-76px;padding:0}
+.levant .hero::before{content:"";position:absolute;inset:0;opacity:.13;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23f2d28b' stroke-width='1.4'%3E%3Cpath d='M40 4l10 26 26 10-26 10-10 26-10-26L4 40l26-10z'/%3E%3Ccircle cx='40' cy='40' r='9'/%3E%3C/g%3E%3C/svg%3E")}
+.levant header:not(.solid) .brand,.levant header:not(.solid) .links{color:#fdf7ea}
+.lv-hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:end;position:relative;min-height:min(calc(100vh - 34px),880px)}
+.lv-in{padding:190px 24px 90px max(24px,calc((100vw - 1180px)/2 + 24px));max-width:none;margin:0}
+.levant .hero h1 em{font-family:'Amiri',serif;color:#f2d28b}
+.levant .eyebrow{color:#f2d28b}
+.levant section:not(.hero) .eyebrow{color:var(--accent)}
+.lv-arch{align-self:stretch;display:flex;align-items:flex-end;padding:120px 40px 0 0}
+.lv-arch img{width:100%;height:min(78vh,680px);object-fit:cover;border-radius:999px 999px 0 0;border:10px solid #f2d28b33}
+.levant h2 em{font-family:'Amiri',serif;color:var(--accent)}
+.levant .item{text-align:center;padding:38px 26px;background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='14'%3E%3Cpath d='M0 7h22M38 7h22M30 1l6 6-6 6-6-6z' stroke='%23b8862f' fill='none'/%3E%3C/svg%3E") center 18px no-repeat}
+.levant .item-top{flex-direction:column;align-items:center;padding-top:16px}
+.levant .item h3{font-size:1.45rem}
+.levant .gallery figure:nth-child(odd){border-radius:999px 999px 14px 14px}
+.levant .hl::before{content:"";position:absolute;inset:0;opacity:.1;background-image:inherit}
+@media (max-width:960px){.lv-hero{grid-template-columns:1fr}.lv-arch{padding:0 16px}.lv-arch img{height:420px}.lv-in{padding:150px 16px 50px}}
+
+@media (max-width:960px){
+  .links{display:none}
+  .items{grid-template-columns:1fr 1fr}
+  .revs,.info{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
+  .hl{padding:40px}
+}
+@media (max-width:620px){
+  section{padding:76px 0}
+  .wrap{padding-left:16px;padding-right:16px}
+  .nav{height:68px}
+  .nav .btn{padding:0 14px;height:40px;font-size:.78rem;letter-spacing:.02em}
+  .nav .btn svg{display:none}
+  .brand{font-size:1.2rem}
+  .hero .lead{font-size:1rem;margin-bottom:26px}
+  .cta{flex-direction:column;align-items:stretch}
+  .cta .btn{justify-content:center}
+  .stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:space-between;gap:14px;margin-top:36px}
+  .stats b{font-size:1.55rem}
+  .stats span{font-size:.74rem;display:block;line-height:1.3}
+  .offer-head{margin-bottom:34px}
+  .item{padding:24px}
+  .rev{padding:26px}
+  .card{padding:26px 22px}
+  .map,.map iframe{min-height:300px}
+  .fab{width:54px;height:54px;right:16px;bottom:16px}
+  .items{grid-template-columns:1fr}
+  .gallery .g0,.gallery .g3{grid-column:span 2}
+.gallery .g1:nth-last-child(2),.gallery .g2:last-child{grid-column:span 2}
+  .gallery .g0{grid-row:span 1}
+  .hl{padding:32px 24px}
+}
+@media (max-width:620px){.lv-in{padding-top:130px}.levant .hero h1{font-size:clamp(2.6rem,12vw,3.6rem)}.lv-arch img{height:360px}}
+</style>
+</head>
+<body class="levant">
+<div class="demo">Maquette de démonstration proposée par Hope Silas · site non officiel</div>
+<header id="top"><div class="wrap nav"><a href="#" class="brand">Ya Hala <i>·</i> يا هلا</a><nav class="links"><a href="#carte">La carte</a><a href="#galerie">La maison</a><a href="#avis">Avis</a><a href="#infos">Nous trouver</a></nav><a class="btn" href="https://wa.me/2290166555999?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20chez%20Ya%20Hala" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>Réserver</a></div></header>
+
+<section class="hero"><div class="lv-hero"><div class="wrap lv-in"><p class="eyebrow">Cuisine libanaise · Cotonou</p><h1>Ya Hala,<br><em>soyez les bienvenus.</em></h1><p class="lead">Mezzés à partager, grillades parfumées et l'accueil légendaire du patron. Une maison où l'on revient pour son plat préféré.</p><div class="cta"><a class="btn" href="https://wa.me/2290166555999?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20chez%20Ya%20Hala" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>Réserver une table</a><a class="btn btn-ghost" href="#carte">La carte</a></div><div class="stats"><div><b>4,6★</b><span>270 avis Google</span></div><div><b>12h–23h</b><span>du mardi au dimanche</span></div><div><b>Rooftop</b><span>pour vos dîners</span></div></div></div><div class="lv-arch"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9THpkXuRruNt5K-V5lp7gcG8zeKWUvxRTwvjo2PiL_taM_y-xDimLH2OotoajLn0R0nwHcJtpmRYKfXC_3hl-HDGbaXHvgGbgbMhPDuAOV9nh6LKMxkL55RLTPrQ-ZEER3PrZKb=w1600" alt=""></div></div></section>
+
+<section id="carte" class="offer"><div class="wrap"><div class="offer-head"><div><p class="eyebrow">La carte</p><h2>Le Liban <em>à table</em></h2></div><p class="sub">Des assiettes généreuses, à partager ou non. Carte complète et prix sur demande.</p></div><div class="items"><article class="item reveal"><div class="item-top"><h3>Mezzés</h3></div><p>Houmous, moutabal, taboulé, fattouch : la tradition du partage.</p></article><article class="item reveal"><div class="item-top"><h3>Filet de poisson à l&#x27;ail</h3><span class="price">★</span></div><p>Le plat signature que nos habitués ne manquent jamais.</p></article><article class="item reveal"><div class="item-top"><h3>Grillades</h3></div><p>Chich taouk, kafta et brochettes marinées aux épices.</p></article><article class="item reveal"><div class="item-top"><h3>Manakiches &amp; pizzas</h3></div><p>Pâte maison, zaatar, fromage ou garnitures gourmandes.</p></article><article class="item reveal"><div class="item-top"><h3>Burgers</h3></div><p>Pour les petites et grandes faims, frites maison.</p></article><article class="item reveal"><div class="item-top"><h3>Douceurs d&#x27;Orient</h3></div><p>Pâtisseries libanaises et thé à la menthe.</p></article></div></div></section>
+
+<section class="highlight"><div class="wrap hl reveal"><div><p class="eyebrow">Le soir, sur le toit</p><h2>Un dîner aux chandelles sous les étoiles</h2><p>Notre rooftop vous accueille pour des soirées au calme. Pensez à réserver.</p></div><a class="btn btn-alt" href="https://wa.me/2290166555999?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20chez%20Ya%20Hala" target="_blank" rel="noopener">Réserver le rooftop</a></div></section>
+
+<section id="galerie"><div class="wrap"><p class="eyebrow">La maison</p><h2>Pierre, bois<br><em>et chaleur.</em></h2><div class="gallery"><figure class="g0 reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9THpkXuRruNt5K-V5lp7gcG8zeKWUvxRTwvjo2PiL_taM_y-xDimLH2OotoajLn0R0nwHcJtpmRYKfXC_3hl-HDGbaXHvgGbgbMhPDuAOV9nh6LKMxkL55RLTPrQ-ZEER3PrZKb=w1600" alt="Ya Hala – photo 1" loading="lazy"></figure><figure class="g1 reveal"><img src="https://lh3.googleusercontent.com/grass-cs/AABkmLea0Ico7PUt0YUlQ_ItKE1Pzsfn4HVcq-YIaOKXm8xraCuYGDO5hoqc0lZAKo1aWB1B9ntFnhtkqTnjBbWG7osF9Lcn7DJ-piaUoWQPT_6psqLEnWPC42_ia1y4zluOSAEvIBP4rOTWeg6j=w1600" alt="Ya Hala – photo 2" loading="lazy"></figure><figure class="g2 reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Sd6PIetnm2dmrCoxEuuRzMCMLOJ5E0QLb8EO7NJkJYUXUlM_e8k7vsaq1gCjlYA1Uo-NRFb7i0yPP7LFvMo7UR3LaYzlqCTRQwaKRqDfBK2tIG86MpANEhrx-Xs4V1vs32NP-Ki5efbd2z=w1600" alt="Ya Hala – photo 3" loading="lazy"></figure><figure class="g3 reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RX0ZbMBCcRdR0mKjtuekovYVNPgPlyh0Y7gQ_Cz8b2PRm8IpPzFdXS7R_e19skBXlb1347oc2vMnIBrqlxij88hom9IGSzolZOlleY3xEKLrOWqo92lQO7ohI15xiUjDVw3AbvGMrsqdx8=w1600" alt="Ya Hala – photo 4" loading="lazy"></figure></div></div></section>
+
+<section id="avis" class="reviews"><div class="wrap"><p class="eyebrow">Avis clients</p><h2>Ils sont devenus des habitués</h2><div class="revs"><blockquote class="rev reveal"><p>« Lieu chaleureux avec cuisine libanaise de qualité. Patron extraordinairement gentil et généreux. »</p><cite>Avis Google</cite></blockquote><blockquote class="rev reveal"><p>« La cuisine est excellente et les assiettes bien servies. Je recommande pour un dîner au calme. »</p><cite>Avis Google (traduit)</cite></blockquote><blockquote class="rev reveal"><p>« À chaque visite, je ne résiste pas à mon plat préféré : le filet de poisson à l&#x27;ail. »</p><cite>Avis Google (traduit)</cite></blockquote></div></div></section>
+
+<section id="infos"><div class="wrap"><p class="eyebrow">Horaires &amp; accès</p><h2>Rue 108, Cotonou</h2><div class="info"><div class="card"><ul><li><span>Mardi – Dimanche</span><span>12h00 – 23h00</span></li><li><span>Lundi</span><span>Fermé</span></li></ul><div class="contact"><div>📍 Rue 108 (9C6P+78C), Cotonou</div><div>📞 +229 01 66 55 59 99</div></div><a class="btn" href="https://wa.me/2290166555999?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20chez%20Ya%20Hala" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>Réserver sur WhatsApp</a></div><div class="map"><iframe loading="lazy" title="Plan d'accès Ya Hala" src="https://maps.google.com/maps?q=6.3606977,2.4357751&z=16&output=embed"></iframe></div></div></div></section>
+
+<footer><div class="wrap"><div><div class="brand">Ya Hala <i>·</i> يا هلا</div><small>Restaurant libanais · Cotonou · ★ 4,6 (270 avis Google)</small></div><small>Maquette réalisée par Hope Silas</small></div></footer>
+
+<a class="fab" href="https://wa.me/2290166555999?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20chez%20Ya%20Hala" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg></a>
+<script>
+document.body.classList.add('js');
+const hd=document.querySelector('header');const onS=()=>hd.classList.toggle('solid',scrollY>40);onS();addEventListener('scroll',onS,{passive:true});
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));}else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+</script>
+<!-- lightbox:start -->
+<style>
+main img,section img,figure img,.frame img,.r-media img{cursor:zoom-in}
+.peek img,.lbx img{cursor:default}
+.lbx{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:56px 70px;background:rgba(10,10,10,.55);-webkit-backdrop-filter:blur(18px) saturate(.9);backdrop-filter:blur(18px) saturate(.9);opacity:0;visibility:hidden;transition:opacity .35s cubic-bezier(.22,1,.36,1),visibility .35s}
+.lbx.on{opacity:1;visibility:visible}
+.lbx figure{position:relative;margin:0;max-width:100%;max-height:100%;display:flex;flex-direction:column;align-items:center;gap:14px}
+.lbx img{display:block;max-width:min(92vw,1800px);max-height:calc(100vh - 150px);width:auto;height:auto;object-fit:contain;border-radius:10px;box-shadow:0 2px 4px rgba(0,0,0,.25),0 40px 90px -30px rgba(0,0,0,.8);transform:scale(.92);opacity:0;transition:transform .45s cubic-bezier(.22,1,.36,1),opacity .35s}
+.lbx.on img.ready{transform:none;opacity:1}
+.lbx figcaption{font:500 .85rem/1.4 system-ui,sans-serif;color:rgba(255,255,255,.85);text-align:center}
+.lbx figcaption span{opacity:.6;margin-left:10px}
+.lbx button{position:absolute;border:0;cursor:pointer;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.14);color:#fff;font:400 1.6rem/1 system-ui,sans-serif;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.2);transition:background .25s,transform .25s}
+.lbx button:hover{background:rgba(255,255,255,.26)}
+.lbx button:active{transform:scale(.92)}
+.lbx .x{top:18px;right:18px;font-size:1.4rem}
+.lbx .pv{left:16px;top:50%;margin-top:-26px}
+.lbx .nx{right:16px;top:50%;margin-top:-26px}
+.lbx .spin{position:absolute;width:34px;height:34px;border-radius:50%;border:3px solid rgba(255,255,255,.25);border-top-color:#fff;animation:lbxs .8s linear infinite}
+.lbx img.ready+.spin,.lbx .spin.off{display:none}
+@keyframes lbxs{to{transform:rotate(360deg)}}
+html.lbx-lock,html.lbx-lock body{overflow:hidden}
+@media (max-width:640px){.lbx{padding:60px 10px 40px}.lbx img{max-width:96vw;max-height:calc(100vh - 170px)}.lbx .pv,.lbx .nx{top:auto;bottom:14px;margin:0;width:46px;height:46px}.lbx .pv{left:calc(50% - 56px)}.lbx .nx{right:calc(50% - 56px)}}
+@media (prefers-reduced-motion:reduce){.lbx,.lbx img{transition:none}}
+</style>
+<div class="lbx" id="lbx" role="dialog" aria-modal="true" aria-label="Photo en grand">
+  <figure><img alt=""><span class="spin"></span><figcaption></figcaption></figure>
+  <button class="x" aria-label="Fermer">✕</button><button class="pv" aria-label="Photo précédente">‹</button><button class="nx" aria-label="Photo suivante">›</button>
+</div>
+<script>
+(()=>{const d=document,box=d.getElementById('lbx'),im=box.querySelector('img'),cap=box.querySelector('figcaption'),spin=box.querySelector('.spin');
+const full=s=>s.replace(/=w\d+(-h\d+)?[^/]*$/,'=s2560');
+const pick=()=>[...new Set([...d.querySelectorAll('img')].filter(i=>!i.closest('.lbx,.peek,[aria-hidden="true"],header,footer')&&/googleusercontent/.test(i.src)&&!(i.closest('.stage')&&!i.classList.contains('on'))).map(i=>i.src))];
+let list=[],k=0,last=null;
+const show=n=>{k=(n+list.length)%list.length;im.classList.remove('ready');spin.classList.remove('off');const src=list[k],hi=full(src);
+  im.onload=()=>{im.classList.add('ready');spin.classList.add('off')};im.src=src;const pre=new Image();pre.onload=()=>{if(list[k]===src)im.src=hi};pre.src=hi;
+  const el=[...d.querySelectorAll('img')].find(i=>i.src===src);cap.innerHTML=(el&&el.alt?el.alt:'')+'<span>'+(k+1)+' / '+list.length+'</span>';
+  box.querySelector('.pv').style.display=box.querySelector('.nx').style.display=list.length>1?'':'none'};
+const open=src=>{list=pick();k=Math.max(0,list.indexOf(src));last=d.activeElement;d.documentElement.classList.add('lbx-lock');box.classList.add('on');show(k);box.querySelector('.x').focus({preventScroll:true})};
+const close=()=>{box.classList.remove('on');d.documentElement.classList.remove('lbx-lock');last&&last.focus&&last.focus({preventScroll:true})};
+d.addEventListener('click',e=>{if(box.contains(e.target))return;let t=e.target.closest('img');const st=e.target.closest('.stage');if(st)t=st.querySelector('img.on');
+  if(!t||t.closest('.peek,header,footer,[aria-hidden="true"]')||!/googleusercontent/.test(t.src))return;e.preventDefault();open(t.src)});
+box.addEventListener('click',e=>{if(e.target===box||e.target.tagName==='FIGURE')close()});
+box.querySelector('.x').onclick=close;box.querySelector('.pv').onclick=e=>{e.stopPropagation();show(k-1)};box.querySelector('.nx').onclick=e=>{e.stopPropagation();show(k+1)};
+d.addEventListener('keydown',e=>{if(!box.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowRight')show(k+1);if(e.key==='ArrowLeft')show(k-1)});
+let x0=null;box.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});box.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(k+(dx<0?1:-1));x0=null});
+})();
+</script>
+<!-- lightbox:end -->
+</body>
+</html>
