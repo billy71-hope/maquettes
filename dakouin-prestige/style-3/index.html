@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Dakouin Prestige · Atelier</title>
+<meta name="description" content="Traiteur événementiel à Comè : mariages, séminaires, cocktails, buffets et snacks maison. Déplacement dans tout le Bénin.">
+<meta name="theme-color" content="#f3f2ee">
+<meta property="og:title" content="Dakouin Prestige Traiteur">
+<meta property="og:image" content="../img/egusi-1600.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f3f2ee; --white:#fff; --ink:#111110; --muted:#5d5d58; --rule:#111110; --soft:#d6d5cf;
+  --red:#d7261e; --red-dk:#b51d16;
+  --wa:#1fae55;
+  --sans:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  --gutter:clamp(16px,4vw,40px); --max:1320px; --bar:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:var(--bar)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:10px 16px;z-index:200}
+.skip:focus{left:8px}
+section{scroll-margin-top:60px}
+h1,h2,h3{margin:0;font-weight:800;font-stretch:72%;text-transform:uppercase;letter-spacing:-.015em;line-height:.9}
+h2{font-size:clamp(44px,8vw,120px)}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.02em;text-transform:uppercase}
+.red{color:var(--red)}
+.lead{font-size:clamp(17px,1.5vw,19px);max-width:46ch;margin:0;color:var(--muted)}
+.sec{padding-block:clamp(70px,10vw,130px);border-top:1px solid var(--rule)}
+.shead{display:grid;gap:18px;margin-bottom:clamp(36px,5vw,64px)}
+.shead .mono{display:flex;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:0 24px;border:1px solid var(--ink);font-family:var(--mono);font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.02em;text-decoration:none;cursor:pointer;background:none;transition:background .2s,color .2s,border-color .2s;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-red{background:var(--red);border-color:var(--red);color:#fff}
+.btn-red:hover{background:var(--ink);border-color:var(--ink)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:var(--red);border-color:var(--red)}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+.btn-wa{background:var(--wa);border-color:var(--wa);color:#fff}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+
+/* En-tête */
+.top{position:fixed;inset:0 0 auto;z-index:50;background:var(--paper);border-bottom:1px solid var(--rule)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.brand{text-decoration:none;font-weight:800;font-stretch:72%;text-transform:uppercase;font-size:24px;letter-spacing:-.01em;line-height:1}
+.links{display:none;gap:26px;list-style:none;margin:0;padding:0}
+.links a{text-decoration:none;font-family:var(--mono);font-size:12px;text-transform:uppercase}
+.links a span{color:var(--muted)}
+.links a:hover{color:var(--red)}
+.nav .btn{display:none;min-height:40px;padding:0 16px;font-size:12px}
+.burger{height:40px;padding:0 14px;border:1px solid var(--ink);background:transparent;cursor:pointer;font-family:var(--mono);font-size:12px;text-transform:uppercase}
+.burger::after{content:"Menu"}
+.menu-open .burger::after{content:"Fermer"}
+.burger span{display:none}
+.sheet{position:fixed;inset:60px 0 0;z-index:45;background:var(--paper);padding:10px var(--gutter) calc(24px + env(safe-area-inset-bottom));display:flex;flex-direction:column;justify-content:space-between;visibility:hidden;clip-path:inset(0 0 100% 0);transition:clip-path .5s var(--ease),visibility .5s}
+.menu-open .sheet{visibility:visible;clip-path:inset(0)}
+.sheet ol{list-style:none;margin:0;padding:0;counter-reset:m}
+.sheet a.l{display:flex;align-items:baseline;gap:14px;padding:12px 0;border-bottom:1px solid var(--rule);text-decoration:none;font-weight:800;font-stretch:72%;text-transform:uppercase;font-size:40px;line-height:1}
+.sheet a.l::before{counter-increment:m;content:"0" counter(m);font-family:var(--mono);font-size:12px;font-weight:400;color:var(--red)}
+.sheet .row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+body.menu-open{overflow:hidden}
+
+/* Hero */
+.hero{padding-top:60px}
+.meta{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule);flex-wrap:wrap}
+.hero h1{font-size:clamp(52px,12.2vw,196px);padding:clamp(20px,3vw,36px) 0;border-bottom:1px solid var(--rule)}
+.hero h1 .red{display:block}
+.hero-grid{display:grid;border-bottom:1px solid var(--rule)}
+.hero-grid>*{min-width:0}
+.hero-txt{padding:28px 0 32px;display:grid;gap:26px;align-content:space-between}
+.hero-txt p{margin:0;font-size:clamp(17px,1.6vw,20px);max-width:40ch}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule);margin:0;padding:0;list-style:none}
+.facts li{padding:14px 10px 0 0}
+.facts li+li{padding-left:12px;border-left:1px solid var(--rule)}
+.facts strong{display:block;font-weight:800;font-stretch:72%;text-transform:uppercase;font-size:clamp(22px,2.4vw,32px);line-height:1}
+.facts span{font-family:var(--mono);font-size:11px;text-transform:uppercase;color:var(--muted)}
+.hero-fig{margin:0;position:relative;border-top:1px solid var(--rule)}
+.hero-fig img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.hero-fig figcaption{padding:10px 0;color:var(--muted)}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* Prestations : index */
+.index{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.index a{display:grid;grid-template-columns:auto 1fr 96px;gap:8px 16px;align-items:center;padding:18px 0;border-bottom:1px solid var(--rule);text-decoration:none;transition:background .25s,color .25s,padding .3s var(--ease)}
+.index .n{font-family:var(--mono);font-size:12px;color:var(--red);align-self:start;padding-top:6px}
+.index h3{font-size:clamp(30px,4.4vw,58px)}
+.index p{grid-column:2/3;margin:0;color:var(--muted);font-size:15px;max-width:52ch;transition:color .25s}
+.index img{grid-column:3;grid-row:1/span 2;width:96px;aspect-ratio:1;object-fit:cover;filter:grayscale(1);transition:filter .3s}
+.index .tag{font-family:var(--mono);font-size:11px;text-transform:uppercase;background:var(--red);color:#fff;padding:3px 7px;vertical-align:middle;margin-left:10px;font-stretch:100%;letter-spacing:0;display:inline-block;transform:translateY(-.4em)}
+.index .go{display:none}
+.index a:hover{background:var(--ink);color:var(--paper);padding-inline:14px}
+.index a:hover p{color:#b8b8b0}
+.index a:hover img{filter:none}
+
+/* Carte */
+.menu-grid{display:grid;gap:36px}
+.menu-grid>*{min-width:0}
+.tabs{display:grid;border-top:1px solid var(--rule)}
+.tab{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:56px;padding:0 4px;border:0;border-bottom:1px solid var(--rule);background:none;cursor:pointer;text-align:left;font-weight:800;font-stretch:72%;text-transform:uppercase;font-size:26px;line-height:1;transition:background .2s,color .2s,padding .3s var(--ease)}
+.tab::after{content:"→";font-family:var(--mono);font-size:14px;font-weight:400;opacity:0;transition:opacity .2s}
+.tab:hover{color:var(--red)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);padding:0 14px}
+.tab[aria-selected="true"]::after{opacity:1}
+.carte-side .note{color:var(--muted);font-size:14px;margin:20px 0 0;max-width:36ch}
+.stage{position:relative;aspect-ratio:16/10;background:var(--soft);overflow:hidden;margin-bottom:8px}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s}
+.stage img.on{opacity:1}
+.panel h3{font-size:clamp(34px,4vw,56px);margin:22px 0 6px}
+.panel>p{margin:0 0 20px;color:var(--muted)}
+.dishes{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.dishes li{display:grid;grid-template-columns:28px 1fr auto;gap:2px 12px;padding:14px 0;border-bottom:1px solid var(--soft);counter-increment:d}
+.dishes{counter-reset:d}
+.dishes li::before{content:counter(d,decimal-leading-zero);font-family:var(--mono);font-size:11px;color:var(--muted);padding-top:5px}
+.dishes b{font-weight:700;font-size:18px}
+.dishes small{grid-column:2/-1;color:var(--muted);font-size:14.5px}
+.dishes em{grid-column:3;grid-row:1;font-style:normal;font-family:var(--mono);font-size:11px;text-transform:uppercase;color:var(--red);align-self:center}
+
+/* Snacks */
+.snacks{background:var(--red);color:#fff;border-top:0}
+.snacks .shead .mono{border-color:#fff}
+.snacks .lead{color:#ffe2df}
+.snack-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:36px}
+.snack-row figure{margin:0}
+.snack-row img{width:100%;aspect-ratio:3/4;object-fit:cover;background:#fff}
+.snack-row figcaption{padding-top:8px;font-family:var(--mono);font-size:11px;text-transform:uppercase}
+.snack-txt{display:grid;gap:28px}
+.snack-txt>*{min-width:0}
+.ticks{list-style:none;margin:0;padding:0;border-top:1px solid #fff}
+.ticks li{display:grid;grid-template-columns:34px 1fr;padding:12px 0;border-bottom:1px solid rgb(255 255 255/.5)}
+.ticks li span{font-family:var(--mono);font-size:12px;padding-top:3px}
+.snacks .btn{border-color:#fff;background:#fff;color:var(--ink)}
+.snacks .btn:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.real{font-family:var(--mono);font-size:11px;text-transform:uppercase;margin:14px 0 0}
+
+/* Étapes */
+.steps{list-style:none;margin:0;padding:0;display:grid;counter-reset:s;border-top:1px solid var(--rule)}
+.step{padding:22px 0 26px;border-bottom:1px solid var(--rule)}
+.step::before{counter-increment:s;content:"0" counter(s);display:block;font-weight:800;font-stretch:72%;font-size:84px;line-height:.85;color:transparent;-webkit-text-stroke:1.5px var(--ink);margin-bottom:16px}
+.step h3{font-size:30px}
+.step p{margin:8px 0 0;color:var(--muted);font-size:15.5px;max-width:34ch}
+
+/* Galerie */
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:min(78vw,420px);gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--ink) transparent;padding-bottom:16px;margin-inline:calc(var(--gutter)*-1);padding-inline:var(--gutter);scroll-padding-inline:var(--gutter)}
+.strip button{all:unset;cursor:zoom-in;scroll-snap-align:start;display:block}
+.strip .ph{aspect-ratio:4/5;overflow:hidden;background:var(--soft)}
+.strip img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.strip button:hover img{transform:scale(1.04)}
+.strip button:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.strip .cap{display:flex;justify-content:space-between;gap:10px;padding-top:8px;font-family:var(--mono);font-size:11px;text-transform:uppercase;color:var(--muted)}
+.lb{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;width:100vw;height:100vh;margin:0}
+.lb::backdrop{background:rgb(243 242 238/.97)}
+.lb[open]{display:grid;place-items:center}
+.lb img{max-width:min(92vw,1400px);max-height:78vh;width:auto;height:auto}
+.lb figcaption{text-align:center;margin-top:12px;font-family:var(--mono);font-size:12px;text-transform:uppercase}
+.lb-ctrl{position:fixed;width:50px;height:50px;border:1px solid var(--ink);background:var(--paper);display:grid;place-items:center;cursor:pointer}
+.lb-ctrl:hover{background:var(--ink);color:var(--paper)}
+.lb-ctrl svg{width:20px;height:20px}
+.lb-close{top:max(16px,env(safe-area-inset-top));right:16px}
+.lb-prev{left:16px;top:50%;margin-top:-25px}.lb-next{right:16px;top:50%;margin-top:-25px}
+
+/* Devis : formulaire en grille */
+.devis-grid{display:grid;gap:40px}
+.devis-grid>*{min-width:0}
+.contacts{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--rule)}
+.contacts a,.contacts div{display:grid;grid-template-columns:110px 1fr;gap:10px;padding:14px 0;border-bottom:1px solid var(--rule);text-decoration:none;align-items:baseline}
+.contacts small{font-family:var(--mono);font-size:11px;text-transform:uppercase;color:var(--muted)}
+.contacts strong{font-weight:700;font-size:18px}
+.contacts a:hover strong{color:var(--red)}
+.zones{margin:20px 0 0;font-family:var(--mono);font-size:12px;text-transform:uppercase;color:var(--muted);line-height:1.9}
+.zones b{color:var(--ink);font-weight:500}
+form.card{border:1px solid var(--rule);background:var(--white)}
+.cell{padding:14px 16px;border-bottom:1px solid var(--rule)}
+.fs{border:0;margin:0;padding:14px 16px;border-bottom:1px solid var(--rule)}
+.fs legend{float:left;width:100%;padding:0}
+.fs legend,.lab{display:block;font-family:var(--mono);font-size:11px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;clear:both}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips label{min-height:40px;display:inline-flex;align-items:center;padding:0 12px;border:1px solid var(--ink);cursor:pointer;font-size:14.5px;transition:background .2s,color .2s;user-select:none}
+.chips label:hover{background:var(--paper)}
+.chips input:checked+label{background:var(--ink);color:var(--paper)}
+.chips input:focus-visible+label{outline:2px solid var(--red);outline-offset:2px}
+.grid2{display:grid}
+.grid2>*{min-width:0}
+.field input,.field select,.field textarea{display:block;width:100%;min-width:0;max-width:100%;min-height:40px;padding:4px 0;border:0;border-radius:0;background:transparent;font-size:18px;font-weight:500;appearance:none;-webkit-appearance:none}
+.field input::placeholder,.field textarea::placeholder{color:#a3a39c;font-weight:400}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23111' stroke-width='1.5'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 2px center;padding-right:24px}
+.field textarea{min-height:80px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none}
+.field:focus-within{background:#fbfaf6;box-shadow:inset 3px 0 0 var(--red)}
+.field input[aria-invalid="true"]{color:#b3261e}
+.err{display:none;color:#b3261e;font-size:13.5px;margin-top:4px}
+.err.show{display:block}
+form .btn{width:100%;border:0;min-height:60px;white-space:normal}
+.form-note{font-family:var(--mono);font-size:11px;text-transform:uppercase;color:var(--muted);padding:10px 16px;margin:0;border-top:1px solid var(--rule)}
+
+/* FAQ */
+.faq{border-top:1px solid var(--rule);counter-reset:q}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:44px 1fr 24px;gap:10px;align-items:baseline;padding:20px 0;font-weight:700;font-size:clamp(18px,2vw,22px);line-height:1.3}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{counter-increment:q;content:"Q" counter(q,decimal-leading-zero);font-family:var(--mono);font-size:12px;font-weight:400;color:var(--red)}
+.faq summary::after{content:"+";font-family:var(--mono);font-weight:400;font-size:20px;text-align:right}
+.faq details[open] summary::after{content:"−"}
+.faq summary:hover{color:var(--red)}
+.faq p{margin:0;padding:0 0 22px 54px;color:var(--muted);max-width:70ch}
+
+/* Pied */
+footer{background:var(--ink);color:var(--paper)}
+.fcta{display:grid;gap:24px;padding:clamp(60px,8vw,100px) 0 40px}
+.fcta h2{font-size:clamp(44px,7vw,110px)}
+.fcta .btn-line{border-color:var(--paper)}
+.fcta .btn-line:hover{background:var(--paper);color:var(--ink)}
+.fcols{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:26px 0;border-top:1px solid #3a3a37}
+.fcols h4{margin:0 0 10px;font-family:var(--mono);font-size:11px;font-weight:400;text-transform:uppercase;color:#8e8e87}
+.fcols ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.fcols a{text-decoration:none}.fcols a:hover{color:var(--red)}
+.fcols .about{grid-column:1/-1;margin:0;max-width:44ch;color:#c9c9c2}
+.word{font-weight:800;font-stretch:62%;text-transform:uppercase;font-size:clamp(64px,19.5vw,300px);line-height:.8;letter-spacing:-.02em;white-space:nowrap;border-top:1px solid #3a3a37;padding-top:20px;overflow:hidden}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:16px 0 24px;font-family:var(--mono);font-size:11px;text-transform:uppercase;color:#8e8e87}
+
+/* Barre mobile & WhatsApp */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr 1.2fr;background:var(--paper);border-top:1px solid var(--rule);padding-bottom:env(safe-area-inset-bottom);transform:translateY(110%);transition:transform .4s var(--ease)}
+.mbar.show{transform:none}
+.mbar a{min-height:60px;display:flex;align-items:center;justify-content:center;gap:7px;font-family:var(--mono);font-size:12px;text-transform:uppercase;text-decoration:none}
+.mbar a+a{border-left:1px solid var(--rule)}
+.mbar svg{width:17px;height:17px}
+.mbar .wa{background:var(--wa);color:#fff}
+.mbar .dv{background:var(--red);color:#fff}
+.fab{display:none;position:fixed;right:20px;bottom:20px;z-index:40;align-items:center;gap:10px;height:52px;padding:0 18px;background:var(--wa);color:#fff;text-decoration:none;font-family:var(--mono);font-size:12px;text-transform:uppercase;transform:translateY(160%);transition:transform .4s var(--ease)}
+.fab.show{transform:none}
+.fab svg{width:22px;height:22px}
+
+@media (max-width:899px){:root{--bar:calc(60px + env(safe-area-inset-bottom))}}
+@media (max-width:420px){.hero-txt .cta .btn{flex:1 1 100%}.meta .hide-s{display:none}}
+@media (min-width:600px){
+  .index a{grid-template-columns:60px 1fr 140px;padding:22px 0}
+  .index img{width:140px;aspect-ratio:4/3}
+  .grid2{grid-template-columns:1fr 1fr}
+  .grid2>.field+.field{border-left:1px solid var(--rule)}
+  .steps{grid-template-columns:1fr 1fr}
+  .step:nth-child(odd){padding-right:24px;border-right:1px solid var(--rule)}
+  .step:nth-child(even){padding-left:24px}
+  .fcols{grid-template-columns:2fr 1fr 1fr}
+  .fcols .about{grid-column:auto}
+}
+@media (min-width:900px){
+  .links,.nav .btn{display:flex}
+  .burger,.sheet,.mbar{display:none}
+  .fab{display:inline-flex}
+  .hero-grid{grid-template-columns:5fr 7fr}
+  .hero-txt{padding:32px 32px 32px 0;border-right:1px solid var(--rule)}
+  .hero-fig{border-top:0}
+  .hero-fig img{aspect-ratio:auto;height:min(64vh,620px)}
+  .hero-fig figcaption{padding:10px 0 10px 20px}
+  .shead{grid-template-columns:2fr 1fr;align-items:end;gap:18px 48px}
+  .shead .mono{grid-column:1/-1}
+  .index a{grid-template-columns:80px 1.2fr 1fr 180px 40px;gap:24px;padding:20px 0}
+  .index h3{grid-column:2}
+  .index p{grid-column:3;grid-row:1}
+  .index img{grid-column:4;grid-row:1;width:180px;aspect-ratio:16/10}
+  .index .go{display:block;grid-column:5;font-family:var(--mono);font-size:20px;text-align:right}
+  .menu-grid{grid-template-columns:4fr 8fr;gap:48px}
+  .carte-side{position:sticky;top:90px;align-self:start}
+  .snack-row{grid-template-columns:1fr 1fr 1fr}
+  .snack-txt{grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .steps{grid-template-columns:repeat(4,1fr)}
+  .step,.step:nth-child(odd),.step:nth-child(even){padding:22px 24px 26px;border-right:1px solid var(--rule)}
+  .step:first-child{padding-left:0}
+  .step:last-child{border-right:0;padding-right:0}
+  .devis-grid{grid-template-columns:5fr 7fr;gap:56px;align-items:start}
+  .devis-grid>div{position:sticky;top:90px}
+  .fcta{grid-template-columns:1fr auto;align-items:end}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .rv{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="arr" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.06c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2.01.89 2.16.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.3-.13.59.17.29.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.3 1.42.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.65-.14.26.1 1.69.8 1.98.94.29.14.48.22.55.34.07.12.07.68-.17 1.36z"/></symbol>
+  <symbol id="tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#accueil" aria-label="Dakouin Prestige, retour en haut">Dakouin Prestige<span class="red">.</span></a>
+    <nav aria-label="Navigation principale"><ul class="links">
+      <li><a href="#prestations"><span>01 </span>Prestations</a></li><li><a href="#carte"><span>02 </span>Carte</a></li><li><a href="#snacks"><span>03 </span>Snacks</a></li><li><a href="#galerie"><span>05 </span>Galerie</a></li><li><a href="#faq"><span>07 </span>FAQ</a></li>
+    </ul></nav>
+    <a class="btn btn-red" href="#devis">Devis →</a>
+    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="sheet"><span></span></button>
+  </div>
+</header>
+
+<div class="sheet" id="sheet" aria-hidden="true">
+  <ol>
+    <li><a class="l" href="#prestations">Prestations</a></li>
+    <li><a class="l" href="#carte">La carte</a></li>
+    <li><a class="l" href="#snacks">Snacks</a></li>
+    <li><a class="l" href="#galerie">Galerie</a></li>
+    <li><a class="l" href="#devis">Devis</a></li>
+    <li><a class="l" href="#faq">Questions</a></li>
+  </ol>
+  <div class="row">
+    <a class="btn btn-line" href="tel:+2290159431810">Appeler</a>
+    <a class="btn btn-wa" href="https://wa.me/2290159431810?text=Bonjour%20Dakouin%20Prestige%2C%20je%20souhaite%20des%20informations%20sur%20vos%20prestations." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</div>
+
+<main id="contenu">
+<section class="hero" id="accueil" aria-label="Accueil">
+  <div class="wrap">
+    <div class="meta mono"><span>Traiteur événementiel</span><span class="hide-s">Mariages · Séminaires · Cocktails</span><span>Comè, Bénin</span></div>
+    <h1 class="rv">Vos réceptions, <span class="red">servies avec prestige.</span></h1>
+    <div class="hero-grid">
+      <div class="hero-txt rv">
+        <p>Mariages, séminaires, cocktails et buffets. Une cuisine généreuse, un service soigné, de la préparation au rangement.</p>
+        <div class="cta">
+          <a class="btn btn-red" href="#devis">Demander un devis <svg aria-hidden="true"><use href="#arr"/></svg></a>
+          <a class="btn btn-line" href="#carte">Voir la carte</a>
+        </div>
+        <ul class="facts">
+          <li><strong>5 ans +</strong><span>d'expérience</span></li>
+          <li><strong>Comè</strong><span>&amp; Cotonou</span></li>
+          <li><strong>Bénin</strong><span>sur devis</span></li>
+        </ul>
+      </div>
+      <figure class="hero-fig rv">
+        <img src="../img/egusi-800.webp" srcset="../img/egusi-800.webp 800w, ../img/egusi-1600.webp 1600w" sizes="(min-width:900px) 58vw, 100vw" alt="Bol de sauce aux graines et viandes assorties tenu à deux mains" fetchpriority="high">
+        <figcaption class="mono">Fig. 01 — Sauce aux graines &amp; viandes assorties</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="prestations" style="border-top:0">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="mono"><span>01 — Prestations</span><span>6 formules</span></div>
+      <h2>Un traiteur pour <span class="red">chaque</span> occasion.</h2>
+      <p class="lead">Du café d'accueil d'un séminaire au dîner de mariage de 300 invités, on adapte le menu, la quantité et le service à votre événement.</p>
+    </div>
+    <ul class="index">
+      <li class="rv"><a href="#devis" data-type="Mariage"><span class="n">(01)</span><h3>Mariages<span class="tag">Le plus demandé</span></h3><p>Dot, mariage civil, religieux ou coutumier : buffet ou service à table, pour 50 à plusieurs centaines d'invités.</p><img src="../img/mariage-danse-800.webp" alt="Mariés et invités qui dansent" loading="lazy"><span class="go" aria-hidden="true">→</span></a></li>
+      <li class="rv"><a href="#devis" data-type="Séminaire"><span class="n">(02)</span><h3>Séminaires</h3><p>Accueil, pauses café du matin et de l'après-midi, déjeuner. Livré et servi à l'heure.</p><img src="../img/cafe-800.webp" alt="Pause café avec viennoiseries" loading="lazy"><span class="go" aria-hidden="true">→</span></a></li>
+      <li class="rv"><a href="#devis" data-type="Cocktail"><span class="n">(03)</span><h3>Cocktails</h3><p>Bouchées salées et sucrées, à déguster debout.</p><img src="../img/canapes-800.webp" alt="Bouchées de cocktail" loading="lazy"><span class="go" aria-hidden="true">→</span></a></li>
+      <li class="rv"><a href="#devis" data-type="Buffet"><span class="n">(04)</span><h3>Buffets</h3><p>Chauds, froids ou mixtes, en chauffe-plats.</p><img src="../img/buffet-chauffant-800.webp" alt="Buffet de plats chauds" loading="lazy"><span class="go" aria-hidden="true">→</span></a></li>
+      <li class="rv"><a href="#carte"><span class="n">(05)</span><h3>Restaurant &amp; bar</h3><p>Une carte variée de plats et de boissons, à emporter ou sur place.</p><img src="../img/grillades-800.webp" alt="Viandes et légumes grillés" loading="lazy"><span class="go" aria-hidden="true">→</span></a></li>
+      <li class="rv"><a href="#devis" data-type="Anniversaire"><span class="n">(06)</span><h3>Décoration</h3><p>Nappage, centres de table et mise en place, assortis à votre thème.</p><img src="../img/table-ronde-800.webp" alt="Table ronde dressée avec centre floral" loading="lazy"><span class="go" aria-hidden="true">→</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="carte">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="mono"><span>02 — La carte</span><span>Indicative</span></div>
+      <h2>Des saveurs d'ici, <span class="red">bien servies.</span></h2>
+    </div>
+    <div class="menu-grid">
+      <div class="carte-side rv">
+        <div class="tabs" role="tablist" aria-label="Catégories de la carte">
+          <button class="tab" role="tab" id="t-0" aria-controls="p-0" aria-selected="true">Cuisine béninoise</button>
+          <button class="tab" role="tab" id="t-1" aria-controls="p-1" aria-selected="false" tabindex="-1">Grillades</button>
+          <button class="tab" role="tab" id="t-2" aria-controls="p-2" aria-selected="false" tabindex="-1">Cocktail</button>
+          <button class="tab" role="tab" id="t-3" aria-controls="p-3" aria-selected="false" tabindex="-1">Pause café</button>
+        </div>
+        <p class="note">Chaque menu est composé avec vous selon le nombre d'invités et le budget.</p>
+      </div>
+      <div class="rv">
+        <div class="stage">
+          <img class="on" src="../img/plats-800.webp" srcset="../img/plats-800.webp 800w, ../img/plats-1600.webp 1600w" sizes="(min-width:900px) 66vw, 100vw" alt="Plusieurs plats africains servis ensemble" loading="lazy">
+          <img src="../img/braise-800.webp" srcset="../img/braise-800.webp 800w, ../img/braise-1600.webp 1600w" sizes="(min-width:900px) 66vw, 100vw" alt="Viande grillée sur la braise" loading="lazy">
+          <img src="../img/bouchees-800.webp" srcset="../img/bouchees-800.webp 800w, ../img/bouchees-1600.webp 1600w" sizes="(min-width:900px) 66vw, 100vw" alt="Petites bouchées de cocktail" loading="lazy">
+          <img src="../img/cafe-croissants-800.webp" srcset="../img/cafe-croissants-800.webp 800w, ../img/cafe-croissants-1600.webp 1600w" sizes="(min-width:900px) 66vw, 100vw" alt="Café et croissants" loading="lazy">
+        </div>
+        <div class="panel" role="tabpanel" id="p-0" aria-labelledby="t-0">
+          <h3>Cuisine béninoise</h3><p>Les classiques qu'on attend à une belle fête, cuisinés le jour même.</p>
+          <ul class="dishes">
+            <li><b>Amiwo &amp; poulet</b><em>Signature</em><small>Pâte rouge, poulet sauté à la tomate</small></li>
+            <li><b>Riz jollof &amp; poisson braisé</b><small>Riz parfumé, poisson du jour</small></li>
+            <li><b>Atassi</b><small>Riz-haricot, sauce tomate pimentée</small></li>
+            <li><b>Sauce d'arachide &amp; akassa</b><small>Viande ou poisson au choix</small></li>
+            <li><b>Alloco</b><small>Bananes plantains frites</small></li>
+          </ul>
+        </div>
+        <div class="panel" role="tabpanel" id="p-1" aria-labelledby="t-1" hidden>
+          <h3>Grillades &amp; braisés</h3><p>Cuits sur place au feu de bois quand l'espace le permet.</p>
+          <ul class="dishes">
+            <li><b>Poulet braisé</b><em>Signature</em><small>Mariné aux épices, piment à part</small></li>
+            <li><b>Poisson braisé</b><small>Bar ou carpe, oignons et tomates</small></li>
+            <li><b>Brochettes de bœuf</b><small>Marinade maison</small></li>
+            <li><b>Porc ou agneau grillé</b><small>Selon la saison</small></li>
+            <li><b>Accompagnements</b><small>Attiéké, frites d'igname, salade</small></li>
+          </ul>
+        </div>
+        <div class="panel" role="tabpanel" id="p-2" aria-labelledby="t-2" hidden>
+          <h3>Cocktail &amp; buffet</h3><p>Des pièces qui se mangent debout, en une ou deux bouchées.</p>
+          <ul class="dishes">
+            <li><b>Nems &amp; samoussas</b><small>Bœuf, poulet ou légumes</small></li>
+            <li><b>Mini-pizzas &amp; feuilletés</b><small>Salés, servis tièdes</small></li>
+            <li><b>Brochettes apéritives</b><small>Poulet, crevettes, fruits</small></li>
+            <li><b>Verrines &amp; mignardises</b><small>Douceurs sucrées</small></li>
+            <li><b>Beignets maison</b><em>Maison</em><small>Le petit plus que tout le monde reprend</small></li>
+          </ul>
+        </div>
+        <div class="panel" role="tabpanel" id="p-3" aria-labelledby="t-3" hidden>
+          <h3>Pause café</h3><p>Pour vos séminaires, formations et conférences.</p>
+          <ul class="dishes">
+            <li><b>Café, thé, lait</b><small>Servis chauds toute la session</small></li>
+            <li><b>Jus locaux</b><em>Frais</em><small>Bissap, gingembre, baobab</small></li>
+            <li><b>Viennoiseries</b><small>Croissants, pains au chocolat</small></li>
+            <li><b>Cakes &amp; beignets</b><small>Faits maison</small></li>
+            <li><b>Eau minérale</b><small>Petites bouteilles</small></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec snacks" id="snacks">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="mono"><span>03 — Snacks maison</span><span>Vraies photos</span></div>
+      <h2>Le petit croquant qui fait plaisir.</h2>
+    </div>
+    <div class="snack-row rv">
+      <figure><img src="../img/snack-pack.webp" alt="Pack de gobelets de snacks Dakouin Prestige filmés sous plastique" loading="lazy" width="608" height="1080"><figcaption>Fig. 02 — Pack de 6</figcaption></figure>
+      <figure><img src="../img/snack-beignets.webp" alt="Gobelet de petits beignets croustillants" loading="lazy" width="500" height="500"><figcaption>Fig. 03 — Beignets</figcaption></figure>
+      <figure><img src="../img/snack-chips.webp" alt="Gobelet de chips croustillantes" loading="lazy" width="500" height="500"><figcaption>Fig. 04 — Chips</figcaption></figure>
+    </div>
+    <div class="snack-txt rv">
+      <p class="lead">Des gobelets de snacks préparés chez nous, prêts à offrir ou à partager.</p>
+      <div>
+        <ul class="ticks">
+          <li><span>a.</span>Beignets, chips, arachides grillées</li>
+          <li><span>b.</span>Vendus par pack de 6 gobelets</li>
+          <li><span>c.</span>Idéal pour les anniversaires, les cadeaux d'invités et les pauses</li>
+        </ul>
+        <div class="cta" style="margin-top:24px"><a class="btn" href="https://wa.me/2290159431810?text=Bonjour%20Dakouin%20Prestige%2C%20je%20voudrais%20commander%20des%20packs%20de%20snacks." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Commander des snacks</a></div>
+        <p class="real">● Photos de nos produits</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="fonctionnement" style="border-top:0">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="mono"><span>04 — Méthode</span><span>4 étapes</span></div>
+      <h2>Vous recevez, on s'occupe <span class="red">du reste.</span></h2>
+    </div>
+    <ol class="steps">
+      <li class="step rv"><h3>Vous écrivez</h3><p>Type d'événement, date, lieu et nombre d'invités, sur WhatsApp ou via le formulaire.</p></li>
+      <li class="step rv"><h3>On propose</h3><p>Un devis clair et détaillé, ajusté à votre budget.</p></li>
+      <li class="step rv"><h3>On valide</h3><p>Choix des plats, du service et de la décoration. Une dégustation est possible pour les grands événements.</p></li>
+      <li class="step rv"><h3>Le jour J</h3><p>Installation, service et rangement. Vous profitez de vos invités.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="galerie">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="mono"><span>05 — Galerie</span><span>Faites défiler →</span></div>
+      <h2>L'ambiance de nos <span class="red">réceptions.</span></h2>
+    </div>
+    <div class="strip" id="gallery">
+      <button data-full="../img/buffet-argile-1600.webp" aria-label="Agrandir : buffet en pots d'argile"><div class="ph"><img src="../img/buffet-argile-800.webp" alt="Buffet de plats servis dans des pots en argile" loading="lazy" style="object-position:50% 85%"></div><div class="cap"><span>Buffet en pots d'argile</span><span>01/09</span></div></button>
+      <button data-full="../img/salle-guirlandes-1600.webp" aria-label="Agrandir : salle de réception"><div class="ph"><img src="../img/salle-guirlandes-800.webp" alt="Salle de réception décorée de guirlandes lumineuses" loading="lazy"></div><div class="cap"><span>Salle de réception</span><span>02/09</span></div></button>
+      <button data-full="../img/mariage-fete-1600.webp" aria-label="Agrandir : mariage"><div class="ph"><img src="../img/mariage-fete-800.webp" alt="Invités en tenue de fête qui dansent à un mariage" loading="lazy"></div><div class="cap"><span>Soirée de mariage</span><span>03/09</span></div></button>
+      <button data-full="../img/buffet-salades-1600.webp" aria-label="Agrandir : buffet de salades"><div class="ph"><img src="../img/buffet-salades-800.webp" alt="Buffet de salades fraîches" loading="lazy"></div><div class="cap"><span>Salades fraîches</span><span>04/09</span></div></button>
+      <button data-full="../img/poulet-riz-1600.webp" aria-label="Agrandir : poulet et riz"><div class="ph"><img src="../img/poulet-riz-800.webp" alt="Poulet doré sur riz jaune" loading="lazy"></div><div class="cap"><span>Poulet &amp; riz</span><span>05/09</span></div></button>
+      <button data-full="../img/table-fleurs-1600.webp" aria-label="Agrandir : table dressée"><div class="ph"><img src="../img/table-fleurs-800.webp" alt="Table dressée avec fleurs blanches et verres" loading="lazy"></div><div class="cap"><span>Table dressée</span><span>06/09</span></div></button>
+      <button data-full="../img/buffet-jardin-1600.webp" aria-label="Agrandir : buffet en extérieur"><div class="ph"><img src="../img/buffet-jardin-800.webp" alt="Buffet varié installé près d'un jardin" loading="lazy"></div><div class="cap"><span>Buffet en extérieur</span><span>07/09</span></div></button>
+      <button data-full="../img/verrines-1600.webp" aria-label="Agrandir : bouchées sucrées"><div class="ph"><img src="../img/verrines-800.webp" alt="Bouchées sucrées pour un cocktail" loading="lazy"></div><div class="cap"><span>Bouchées sucrées</span><span>08/09</span></div></button>
+      <button data-full="../img/hero-1600.webp" aria-label="Agrandir : riz jollof"><div class="ph"><img src="../img/hero-800.webp" alt="Riz jollof, poisson braisé et brochettes" loading="lazy"></div><div class="cap"><span>Riz jollof &amp; poisson</span><span>09/09</span></div></button>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="devis">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="mono"><span>06 — Devis</span><span>Gratuit · sans engagement</span></div>
+      <h2>Parlons de votre <span class="red">événement.</span></h2>
+    </div>
+    <div class="devis-grid">
+      <div class="rv">
+        <p class="lead">Remplissez le formulaire : votre demande arrive directement sur notre WhatsApp, déjà rédigée.</p>
+        <ul class="contacts">
+          <li><a href="tel:+2290159431810"><small>Téléphone</small><strong>+229 01 59 43 18 10</strong></a></li>
+          <li><a href="https://wa.me/2290159431810" target="_blank" rel="noopener"><small>WhatsApp</small><strong>Écrire un message →</strong></a></li>
+          <li><div><small>Adresse</small><strong>Comè, Mono, Bénin</strong></div></li>
+        </ul>
+        <p class="zones" aria-label="Zones desservies"><b>Comè</b> / Cotonou / Ouidah / Grand-Popo / Lokossa / partout au Bénin sur devis</p>
+      </div>
+      <form class="card rv" id="form" novalidate>
+        <fieldset class="fs">
+          <legend>A. Type d'événement</legend>
+          <div class="chips">
+            <input type="radio" name="type" id="ty1" value="Mariage" checked><label for="ty1">Mariage</label>
+            <input type="radio" name="type" id="ty2" value="Séminaire"><label for="ty2">Séminaire</label>
+            <input type="radio" name="type" id="ty3" value="Anniversaire"><label for="ty3">Anniversaire</label>
+            <input type="radio" name="type" id="ty4" value="Cocktail"><label for="ty4">Cocktail</label>
+            <input type="radio" name="type" id="ty5" value="Buffet"><label for="ty5">Buffet</label>
+            <input type="radio" name="type" id="ty6" value="Cérémonie familiale"><label for="ty6">Cérémonie familiale</label>
+            <input type="radio" name="type" id="ty7" value="Autre"><label for="ty7">Autre</label>
+          </div>
+        </fieldset>
+        <div class="grid2">
+          <div class="field cell"><label class="lab" for="date">B. Date</label><input type="date" id="date" name="date"></div>
+          <div class="field cell"><label class="lab" for="guests">C. Invités</label>
+            <select id="guests" name="guests"><option>Moins de 50</option><option selected>50 à 100</option><option>100 à 200</option><option>200 à 500</option><option>Plus de 500</option></select></div>
+        </div>
+        <div class="field cell"><label class="lab" for="place">D. Lieu de l'événement</label><input type="text" id="place" name="place" placeholder="Ex. : Comè, salle des fêtes" autocomplete="address-level2"></div>
+        <div class="field cell"><label class="lab" for="name">E. Votre nom *</label><input type="text" id="name" name="name" placeholder="Prénom et nom" autocomplete="name" required aria-describedby="name-err"><span class="err" id="name-err">Indiquez votre nom pour qu'on sache à qui répondre.</span></div>
+        <div class="field cell"><label class="lab" for="msg">F. Précisions (facultatif)</label><textarea id="msg" name="msg" placeholder="Menu souhaité, budget, service à table ou buffet…"></textarea></div>
+        <button class="btn btn-red" type="submit">Envoyer sur WhatsApp <svg aria-hidden="true"><use href="#arr"/></svg></button>
+        <p class="form-note">WhatsApp s'ouvre avec votre message déjà rédigé.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="mono"><span>07 — Questions</span><span>5 réponses</span></div>
+      <h2>Avant de <span class="red">réserver.</span></h2>
+    </div>
+    <div class="faq rv">
+      <details><summary>Combien de temps à l'avance faut-il réserver&nbsp;?</summary><p>Pour un mariage ou un grand événement, le plus tôt est le mieux : idéalement plusieurs semaines avant. Pour une pause café ou un petit cocktail, quelques jours peuvent suffire selon nos disponibilités.</p></details>
+      <details><summary>Vous déplacez-vous en dehors de Comè&nbsp;?</summary><p>Oui. Nous intervenons à Cotonou, Ouidah, Grand-Popo et dans tout le Bénin. Les frais de déplacement sont indiqués dans le devis.</p></details>
+      <details><summary>Le service et le matériel sont-ils inclus&nbsp;?</summary><p>Selon votre formule : personnel de service, chauffe-plats, vaisselle et décoration peuvent être compris. Tout est détaillé ligne par ligne dans le devis.</p></details>
+      <details><summary>Peut-on composer son propre menu&nbsp;?</summary><p>Bien sûr. La carte est une base : on peut mélanger cuisine béninoise, grillades et cocktail, et adapter les quantités à votre nombre d'invités.</p></details>
+      <details><summary>Comment obtenir un devis&nbsp;?</summary><p>Le plus rapide : le formulaire ci-dessus ou un message WhatsApp avec la date, le lieu et le nombre d'invités.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fcta">
+      <h2>Votre prochaine fête mérite <span class="red">le meilleur.</span></h2>
+      <div class="cta">
+        <a class="btn btn-red" href="#devis">Demander un devis</a>
+        <a class="btn btn-line" href="tel:+2290159431810">+229 01 59 43 18 10</a>
+      </div>
+    </div>
+    <div class="fcols">
+      <p class="about">Restauration, traiteur et bar à Comè. Mariages, séminaires, cocktails, buffets et événements privés dans tout le Bénin.</p>
+      <div><h4>Navigation</h4><ul><li><a href="#prestations">Prestations</a></li><li><a href="#carte">La carte</a></li><li><a href="#snacks">Snacks</a></li><li><a href="#galerie">Galerie</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+2290159431810">Appeler</a></li><li><a href="https://wa.me/2290159431810" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="#devis">Demande de devis</a></li><li>Comè, Bénin</li></ul></div>
+    </div>
+    <div class="word" aria-hidden="true">Dakouin</div>
+    <div class="legal"><span>© 2026 Dakouin Prestige Traiteur</span><span>Maquette par Hope Silas · photos d'illustration Unsplash, sauf snacks</span></div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar" aria-label="Actions rapides">
+  <a class="call" href="tel:+2290159431810"><svg aria-hidden="true"><use href="#tel"/></svg>Appeler</a>
+  <a class="wa" href="https://wa.me/2290159431810?text=Bonjour%20Dakouin%20Prestige%2C%20je%20souhaite%20des%20informations%20sur%20vos%20prestations." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+  <a class="dv" href="#devis">Devis →</a>
+</div>
+<a class="fab" id="fab" href="https://wa.me/2290159431810?text=Bonjour%20Dakouin%20Prestige%2C%20je%20souhaite%20des%20informations%20sur%20vos%20prestations." target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+
+<dialog class="lb" id="lb" aria-label="Photo agrandie">
+  <figure style="margin:0"><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+  <button class="lb-ctrl lb-close" id="lb-close" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="lb-ctrl lb-prev" id="lb-prev" aria-label="Photo précédente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <button class="lb-ctrl lb-next" id="lb-next" aria-label="Photo suivante"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 6l6 6-6 6"/></svg></button>
+</dialog>
+<script src="../maquette.js"></script>
+</body>
+</html>
